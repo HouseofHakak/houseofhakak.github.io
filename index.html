@@ -3,32 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House of Hakak — Royal Pashmina & Kashmiri Saffron | Est. 1960</title>
-<meta name="description" content="House of Hakak — Three generations of royal Kashmiri craft. Pure Changthangi Pashmina, hand-stitched wool, and certified Saffron.">
+<title>House of Hakak — Fine Pashmina & Certified Kashmiri Saffron | Est. 1960</title>
+<meta name="description" content="House of Hakak — Three generations of Kashmir's finest craftsmanship. Pure Changthangi Pashmina and organic certified Saffron.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ============ ROYAL PALETTE & DESIGN TOKENS ============ */
+  /* ============ LIGHT LUXURY DESIGN TOKENS ============ */
   :root {
-    --royal-black: #0F0208;
-    --royal-wine-dark: #1E0510;
-    --royal-wine-mid: #3B0A22;
-    --royal-wine-accent: #5A1135;
+    --bg-main: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --bg-accent: #F3EFEA;
     
-    --gold-base: #D4AF37;
-    --gold-bright: #F3E5AB;
-    --gold-dark: #997A15;
-    --gold-glow: rgba(212, 175, 55, 0.25);
+    --text-primary: #1A1A1A;
+    --text-muted: #666057;
+    --text-light: #8C857B;
     
-    --text-gold-light: #FBF4E2;
-    --text-muted-gold: #C5B38F;
-    --text-body: #E0D5C1;
+    --accent-gold: #C5A059;
+    --accent-gold-light: #E8D8B8;
+    --border-light: #E5DFC8;
+    --border-subtle: #EAE6DF;
     
-    --border-royal: rgba(212, 175, 55, 0.3);
-    
-    --font-cinzel: 'Cinzel', serif;
-    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
   }
 
@@ -36,221 +32,202 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background-color: var(--royal-black);
-    color: var(--text-body);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.8;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
-  a { text-decoration: none; color: inherit; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+  a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
   img { max-width: 100%; display: block; }
 
-  .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 5vw; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 5vw; }
   
-  .royal-crest {
-    display: inline-block;
-    font-family: var(--font-cinzel);
+  .sub-heading {
+    font-family: var(--font-body);
     font-size: 0.7rem;
-    letter-spacing: 0.35em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--gold-base);
-    margin-bottom: 16px;
-    position: relative;
-    padding: 0 20px;
-  }
-  .royal-crest::before, .royal-crest::after {
-    content: ''; position: absolute; top: 50%; width: 12px; height: 1px; background: var(--gold-base);
-  }
-  .royal-crest::before { left: 0; }
-  .royal-crest::after { right: 0; }
-
-  h1, h2, h3, h4 { font-family: var(--font-cinzel); font-weight: 400; letter-spacing: 0.04em; color: var(--gold-bright); }
-  
-  /* Gold Accent Buttons */
-  .btn-royal {
-    display: inline-flex; align-items: center; justify-content: center; gap: 14px;
-    font-family: var(--font-cinzel); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em;
-    text-transform: uppercase; background: linear-gradient(135deg, #D4AF37 0%, #A8831A 100%);
-    color: var(--royal-black); padding: 18px 38px; border: 1px solid var(--gold-bright);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15); transition: all 0.4s ease;
-  }
-  .btn-royal:hover {
-    background: var(--royal-black); color: var(--gold-bright); border-color: var(--gold-bright);
-    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3); transform: translateY(-3px);
-  }
-  
-  .btn-royal-outline {
-    display: inline-flex; align-items: center; justify-content: center; gap: 14px;
-    font-family: var(--font-cinzel); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.22em;
-    text-transform: uppercase; background: rgba(15, 2, 8, 0.6); color: var(--gold-bright);
-    padding: 18px 38px; border: 1px solid var(--border-royal); backdrop-filter: blur(8px);
-  }
-  .btn-royal-outline:hover {
-    border-color: var(--gold-bright); background: rgba(212, 175, 55, 0.15); color: var(--gold-bright); transform: translateY(-3px);
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+    display: block;
   }
 
-  /* ============ HEADER & NAVIGATION ============ */
-  header.site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    padding: 28px 5vw; transition: all 0.4s ease; background: linear-gradient(to bottom, rgba(15, 2, 8, 0.95), rgba(15, 2, 8, 0));
-  }
-  header.site-header.scrolled {
-    padding: 16px 5vw; background: rgba(15, 2, 8, 0.96); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-royal); box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-  }
-  .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
-  
-  .brand-logo { text-align: center; }
-  .brand-logo .title { font-family: var(--font-cormorant); font-style: italic; font-size: 2.1rem; color: var(--gold-bright); font-weight: 600; line-height: 1; }
-  .brand-logo .subtitle { font-family: var(--font-cinzel); font-size: 0.55rem; letter-spacing: 0.35em; color: var(--gold-base); text-transform: uppercase; margin-top: 4px; }
-
-  nav.nav-links { display: flex; gap: 40px; }
-  nav.nav-links a {
-    font-family: var(--font-cinzel); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-gold-light); opacity: 0.8; position: relative; padding-bottom: 4px;
-  }
-  nav.nav-links a::after {
-    content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 1px; background: var(--gold-base); transition: width 0.3s ease;
-  }
-  nav.nav-links a:hover { opacity: 1; color: var(--gold-bright); }
-  nav.nav-links a:hover::after { width: 100%; }
-
-  /* ============ EDITORIAL SPLIT HERO ============ */
-  .hero-editorial {
-    position: relative; min-height: 100vh;
-    background: radial-gradient(ellipse at center, var(--royal-wine-mid) 0%, var(--royal-wine-dark) 50%, var(--royal-black) 100%);
-    display: flex; align-items: center; padding-top: 130px; padding-bottom: 80px; overflow: hidden;
-  }
-  .hero-editorial::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
-    pointer-events: none;
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.2;
   }
 
-  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; z-index: 2; width: 100%; }
-  
-  .hero-editorial-card {
-    position: relative; height: 600px; border: 1px solid var(--border-royal);
-    background: var(--royal-wine-dark); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  }
-  .hero-editorial-card .card-bg {
-    position: absolute; inset: 0; background-size: cover; background-position: center;
-    opacity: 0.55; transition: transform 0.8s ease, opacity 0.8s ease;
-  }
-  .hero-editorial-card:hover .card-bg { transform: scale(1.05); opacity: 0.7; }
-  .hero-editorial-card::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(15, 2, 8, 0.95) 0%, rgba(15, 2, 8, 0.3) 60%, transparent 100%);
-  }
-  .hero-card-content { position: relative; z-index: 3; }
-  .hero-card-content h2 { font-family: var(--font-cormorant); font-style: italic; font-size: 3rem; color: var(--gold-bright); margin-bottom: 12px; }
-  .hero-card-content p { color: var(--text-muted-gold); font-size: 0.95rem; margin-bottom: 24px; max-width: 90%; }
-
-  /* ============ FOUNDER LEGACY ============ */
-  .legacy-royal {
-    padding: 120px 0; background: var(--royal-wine-dark);
-    border-top: 1px solid var(--border-royal); border-bottom: 1px solid var(--border-royal);
-    position: relative;
-  }
-  .legacy-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
-  .legacy-portrait {
-    position: relative; border: 1px solid var(--gold-base); padding: 12px; background: var(--royal-black);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-  }
-  .legacy-portrait img { width: 100%; height: auto; filter: sepia(0.2) contrast(1.05); }
-  .legacy-portrait .tag {
-    position: absolute; bottom: -18px; right: 20px; background: var(--gold-base); color: var(--royal-black);
-    font-family: var(--font-cinzel); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; padding: 6px 18px; text-transform: uppercase;
-  }
-  .legacy-text h2 { font-family: var(--font-cormorant); font-style: italic; font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
-  .legacy-text p { color: var(--text-body); font-size: 1.05rem; margin-bottom: 20px; opacity: 0.9; }
-
-  /* ============ GALLERY / ATELIER ============ */
-  .atelier { padding: 140px 0; background: var(--royal-black); }
-  .section-header { text-align: center; max-width: 700px; margin: 0 auto 80px; }
-  .section-header h2 { font-family: var(--font-cormorant); font-style: italic; font-size: 3.5rem; color: var(--gold-bright); margin-bottom: 16px; }
-  .section-header p { color: var(--text-muted-gold); font-size: 1rem; }
-
-  .atelier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
-  .atelier-card {
-    background: var(--royal-wine-dark); border: 1px solid var(--border-royal); padding: 18px;
-    transition: all 0.4s ease; position: relative;
-  }
-  .atelier-card:hover { border-color: var(--gold-bright); transform: translateY(-8px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15); }
-  .atelier-card .img-box {
-    aspect-ratio: 4/5; width: 100%; overflow: hidden; background: var(--royal-black);
-    display: flex; align-items: center; justify-content: center; border: 1px solid rgba(212, 175, 55, 0.15);
-  }
-  .atelier-card .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-  .atelier-card:hover .img-box img { transform: scale(1.06); }
-  .atelier-meta { text-align: center; padding-top: 22px; padding-bottom: 8px; }
-  .atelier-meta h3 { font-family: var(--font-cinzel); font-size: 0.95rem; letter-spacing: 0.1em; color: var(--gold-bright); margin-bottom: 6px; }
-  .atelier-meta span { font-family: var(--font-cormorant); font-style: italic; color: var(--text-muted-gold); font-size: 1.1rem; }
-
-  /* ============ SAFFRON ROYAL FEATURE ============ */
-  .saffron-royal {
-    padding: 130px 0; background: radial-gradient(circle at 70% 50%, #4D1A05 0%, #200902 60%, var(--royal-black) 100%);
-    border-top: 1px solid var(--border-royal); position: relative; overflow: hidden;
-  }
-  .saffron-content-box { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-  .saffron-info h2 { font-family: var(--font-cormorant); font-style: italic; font-size: 3.8rem; line-height: 1.05; color: var(--gold-bright); margin-bottom: 24px; }
-  .saffron-info p { color: var(--text-body); font-size: 1.1rem; margin-bottom: 35px; }
-  
-  .saffron-badge-card {
-    background: rgba(15, 2, 8, 0.7); border: 1px solid var(--gold-base); padding: 45px; text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.7); backdrop-filter: blur(10px);
-  }
-  .saffron-badge-card h3 { font-family: var(--font-cormorant); font-style: italic; font-size: 2.8rem; color: var(--gold-bright); margin-bottom: 12px; }
-  .saffron-badge-card p { color: var(--text-muted-gold); font-size: 0.95rem; margin-bottom: 30px; }
-
-  /* ============ OUTLETS SECTION ============ */
-  .outlets-royal { padding: 120px 0; background: var(--royal-black); border-top: 1px solid var(--border-royal); }
-  .outlets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; }
-  .outlet-box {
-    background: var(--royal-wine-dark); border: 1px solid var(--border-royal); padding: 32px 24px; text-align: center;
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; background: var(--text-primary); color: #FFFFFF;
+    padding: 16px 36px; border: 1px solid var(--text-primary);
     transition: all 0.3s ease;
   }
-  .outlet-box:hover { border-color: var(--gold-bright); background: var(--royal-wine-mid); }
-  .outlet-box h3 { font-family: var(--font-cinzel); font-size: 0.85rem; letter-spacing: 0.2em; color: var(--gold-bright); margin-bottom: 12px; }
-  .outlet-box p { color: var(--text-muted-gold); font-size: 0.95rem; }
+  .btn-primary:hover {
+    background: transparent; color: var(--text-primary); transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; background: transparent; color: var(--text-primary);
+    padding: 16px 36px; border: 1px solid var(--text-primary);
+    transition: all 0.3s ease;
+  }
+  .btn-secondary:hover {
+    background: var(--text-primary); color: #FFFFFF; transform: translateY(-2px);
+  }
+
+  /* ============ HEADER ============ */
+  header.site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 24px 5vw; transition: all 0.3s ease;
+    background: rgba(250, 248, 245, 0.85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+  }
+  header.site-header.scrolled {
+    padding: 16px 5vw; background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  }
+  .nav-wrapper { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
+  
+  .brand-logo { text-align: center; }
+  .brand-logo .title { font-family: var(--font-heading); font-size: 1.9rem; color: var(--text-primary); font-weight: 500; letter-spacing: 0.05em; line-height: 1; }
+  .brand-logo .subtitle { font-family: var(--font-body); font-size: 0.55rem; letter-spacing: 0.3em; color: var(--text-light); text-transform: uppercase; margin-top: 4px; }
+
+  nav.nav-menu { display: flex; gap: 36px; }
+  nav.nav-menu a {
+    font-family: var(--font-body); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-muted); position: relative; padding-bottom: 4px;
+  }
+  nav.nav-menu a:hover { color: var(--text-primary); }
+  nav.nav-menu a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 1px; background: var(--text-primary); transition: width 0.3s ease;
+  }
+  nav.nav-menu a:hover::after { width: 100%; }
+
+  /* ============ HERO SECTION ============ */
+  .hero-clean {
+    padding-top: 170px; padding-bottom: 100px; background: var(--bg-main);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .hero-title-area { text-align: center; max-width: 800px; margin: 0 auto 70px; }
+  .hero-title-area h1 { font-size: clamp(2.8rem, 5.5vw, 4.5rem); margin-bottom: 20px; font-weight: 300; }
+  .hero-title-area p { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; max-width: 600px; margin: 0 auto; }
+
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hero-card {
+    position: relative; background: var(--bg-card); border: 1px solid var(--border-subtle);
+    padding: 50px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 520px;
+    transition: all 0.4s ease; overflow: hidden;
+  }
+  .hero-card:hover { border-color: var(--accent-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.04); }
+  .hero-card .bg-img {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    opacity: 0.12; transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  .hero-card:hover .bg-img { transform: scale(1.04); opacity: 0.18; }
+  .hero-card-content { position: relative; z-index: 2; }
+  .hero-card-content h2 { font-size: 2.5rem; margin-bottom: 12px; }
+  .hero-card-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
+
+  /* ============ LEGACY ============ */
+  .legacy-clean { padding: 120px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); }
+  .legacy-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
+  .legacy-image-frame {
+    position: relative; padding: 12px; background: var(--bg-main); border: 1px solid var(--border-subtle);
+  }
+  .legacy-image-frame img { width: 100%; height: auto; filter: grayscale(100%); transition: filter 0.5s ease; }
+  .legacy-image-frame:hover img { filter: grayscale(0%); }
+  .legacy-text h2 { font-size: 3.2rem; margin-bottom: 24px; font-weight: 300; }
+  .legacy-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; font-weight: 300; }
+
+  /* ============ GALLERY ============ */
+  .gallery-clean { padding: 120px 0; background: var(--bg-main); }
+  .section-intro { text-align: center; max-width: 650px; margin: 0 auto 70px; }
+  .section-intro h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
+  .section-intro p { color: var(--text-muted); font-size: 1rem; font-weight: 300; }
+
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .product-card {
+    background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px;
+    transition: all 0.3s ease;
+  }
+  .product-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+  .product-card .img-box {
+    aspect-ratio: 4/5; overflow: hidden; background: #F5F3EF; display: flex; align-items: center; justify-content: center;
+  }
+  .product-card .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .product-card:hover .img-box img { transform: scale(1.05); }
+  .product-info { text-align: center; padding: 20px 10px 10px; }
+  .product-info h3 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 4px; }
+  .product-info span { font-family: var(--font-heading); font-style: italic; color: var(--text-muted); font-size: 1.1rem; }
+
+  /* ============ SAFFRON HIGHLIGHT ============ */
+  .saffron-clean {
+    padding: 110px 0; background: var(--bg-accent); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+  }
+  .saffron-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .saffron-left h2 { font-size: 3.4rem; margin-bottom: 20px; font-weight: 300; }
+  .saffron-left p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 30px; font-weight: 300; }
+  
+  .saffron-card-white {
+    background: var(--bg-card); border: 1px solid var(--border-light); padding: 45px; text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  }
+  .saffron-card-white h3 { font-size: 2.4rem; margin-bottom: 12px; }
+  .saffron-card-white p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
+
+  /* ============ OUTLETS ============ */
+  .outlets-clean { padding: 110px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); }
+  .outlets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; }
+  .outlet-item {
+    background: var(--bg-main); border: 1px solid var(--border-subtle); padding: 30px 20px; text-align: center;
+    transition: all 0.3s ease;
+  }
+  .outlet-item:hover { border-color: var(--accent-gold); background: #FFFFFF; }
+  .outlet-item h3 { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; color: var(--text-primary); }
+  .outlet-item p { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; }
 
   /* ============ FOOTER & CTA ============ */
-  .royal-contact {
-    padding: 120px 0; background: linear-gradient(to bottom, var(--royal-black), var(--royal-wine-dark));
-    text-align: center; border-top: 1px solid var(--border-royal);
-  }
-  .royal-contact h2 { font-family: var(--font-cormorant); font-style: italic; font-size: 3.5rem; margin-bottom: 20px; }
-  .royal-contact p { color: var(--text-muted-gold); max-width: 650px; margin: 0 auto 40px; font-size: 1.1rem; }
+  .cta-clean { padding: 100px 0; text-align: center; background: var(--bg-main); }
+  .cta-clean h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
+  .cta-clean p { color: var(--text-muted); max-width: 550px; margin: 0 auto 35px; font-weight: 300; }
 
-  footer { background: #080104; border-top: 1px solid rgba(212, 175, 55, 0.15); padding: 40px 0; text-align: center; }
-  footer p { font-family: var(--font-cinzel); font-size: 0.65rem; letter-spacing: 0.25em; color: var(--text-muted-gold); }
+  footer { background: var(--bg-card); border-top: 1px solid var(--border-subtle); padding: 35px 0; text-align: center; }
+  footer p { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-light); text-transform: uppercase; }
 
-  /* ============ RESPONSIVE MEDIA QUERIES ============ */
+  /* Responsive Adjustments */
   @media (max-width: 1024px) {
-    .atelier-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .outlets-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-grid, .legacy-grid, .saffron-content-box { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid, .legacy-grid, .saffron-wrapper { grid-template-columns: 1fr; gap: 40px; }
   }
   @media (max-width: 768px) {
-    nav.nav-links { display: none; }
-    .atelier-grid { grid-template-columns: 1fr; }
-    .outlets-grid { grid-template-columns: 1fr; }
-    .hero-editorial-card { height: 450px; }
+    nav.nav-menu { display: none; }
+    .gallery-grid, .outlets-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- ============ SITE HEADER ============ -->
+<!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
-  <div class="nav-container">
+  <div class="nav-wrapper">
     <a href="#top" class="brand-logo">
       <div class="title">House of Hakak</div>
-      <div class="subtitle">Srinagar — Est. 1960</div>
+      <div class="subtitle">Srinagar · Est. 1960</div>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-menu">
       <a href="#about">Legacy</a>
       <a href="#pashmina">Pashmina</a>
       <a href="#saffron">Saffron</a>
@@ -260,176 +237,172 @@
   </div>
 </header>
 
-<!-- ============ EDITORIAL HERO ============ -->
-<section class="hero-editorial" id="top">
-  <div class="section-inner" style="width: 100%;">
-    <div style="text-align: center; margin-bottom: 60px;">
-      <div class="royal-crest">A Luxury of Its Own</div>
-      <h1 style="font-family: var(--font-cormorant); font-style: italic; font-size: clamp(3rem, 7vw, 5.5rem); color: var(--gold-bright); line-height: 1.05;">
-        Crafted Elegance Since 1960
-      </h1>
+<!-- ============ HERO ============ -->
+<section class="hero-clean" id="top">
+  <div class="container">
+    <div class="hero-title-area">
+      <span class="sub-heading">Kashmiri Atelier</span>
+      <h1>Authentic Pashmina &amp; Saffron</h1>
+      <p>Three generations of pure handloom craftsmanship and certified organic saffron, preserved since 1960.</p>
     </div>
 
     <div class="hero-grid">
-      <!-- Card 1: Pashmina Focus -->
-      <div class="hero-editorial-card">
-        <div class="card-bg" style="background-image: url('assets/pashmina-1.jpg');"></div>
+      <div class="hero-card">
+        <div class="bg-img" style="background-image: url('assets/pashmina-1.jpg');"></div>
         <div class="hero-card-content">
-          <div class="royal-crest">Handloom Weaves</div>
-          <h2>Pashmina &amp; Kani Shawls</h2>
-          <p>Pure Changthangi cashmere woven by master artisans in Downtown Srinagar.</p>
-          <a href="#pashmina" class="btn-royal">Explore Collection</a>
+          <span class="sub-heading">Handwoven Weaves</span>
+          <h2>Pure Pashmina</h2>
+          <p>Hand-spun Changthangi cashmere woven with intricate Sozni and Kani craft.</p>
+          <a href="#pashmina" class="btn-primary">Explore Shawls</a>
         </div>
       </div>
 
-      <!-- Card 2: Saffron & Fine Tailoring -->
-      <div class="hero-editorial-card">
-        <div class="card-bg" style="background-image: url('assets/pashmina-2.jpg');"></div>
+      <div class="hero-card">
+        <div class="bg-img" style="background-image: url('assets/pashmina-2.jpg');"></div>
         <div class="hero-card-content">
-          <div class="royal-crest">Heritage Produce</div>
-          <h2>Certified Kashmiri Saffron</h2>
-          <p>Hand-picked Grade-A crimson threads direct from the fields of Pampore.</p>
-          <a href="#saffron" class="btn-royal-outline">Discover Saffron</a>
+          <span class="sub-heading">Heritage Agriculture</span>
+          <h2>Kashmiri Saffron</h2>
+          <p>Grade-A organic crimson threads hand-harvested directly from Pampore.</p>
+          <a href="#saffron" class="btn-secondary">View Saffron</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOUNDER LEGACY ============ -->
-<section class="legacy-royal" id="about">
-  <div class="section-inner">
+<!-- ============ LEGACY ============ -->
+<section class="legacy-clean" id="about">
+  <div class="container">
     <div class="legacy-grid">
-      <div class="legacy-portrait">
+      <div class="legacy-image-frame">
         <img src="assets/habibulal-hakak.jpg" alt="Habibullah Hakak" onerror="this.src='https://via.placeholder.com/400x500.png?text=Habibullah+Hakak';">
-        <div class="tag">Founder</div>
       </div>
       <div class="legacy-text">
-        <div class="royal-crest">Three Generations</div>
-        <h2>Rooted in Downtown Srinagar</h2>
-        <p>Founded by Habibullah Hakak, educated at Islamia School Gojwara, House of Hakak began with an unyielding dedication to true Kashmiri craftsmanship.</p>
-        <p>What started as a micro-scale effort in New Delhi under HK Shawls has grown into a royal house serving over 10,000 homes across four countries—built entirely on trust, handloom purity, and authentic saffron.</p>
+        <span class="sub-heading">Heritage &amp; Lineage</span>
+        <h2>Three Generations of Pure Craft</h2>
+        <p>Founded by Habibullah Hakak in Downtown Srinagar, House of Hakak was established with a singular focus on authenticity.</p>
+        <p>From our early days in New Delhi to serving over 10,000 households globally, we remain dedicated to uncompromised pure wools, natural dyes, and authentic Kashmiri saffron.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ GALLERY ATELIER ============ -->
-<section class="atelier" id="pashmina">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="royal-crest">The Collection</div>
-      <h2>Handmade Luxury</h2>
-      <p>Each piece represents months of meticulous needlework, spinning, and traditional dyeing.</p>
+<!-- ============ GALLERY ============ -->
+<section class="gallery-clean" id="pashmina">
+  <div class="container">
+    <div class="section-intro">
+      <span class="sub-heading">Curated Selection</span>
+      <h2>Fine Textiles</h2>
+      <p>Every piece is individually handcrafted by master weavers in the Kashmir Valley.</p>
     </div>
 
-    <div class="atelier-grid">
-      <div class="atelier-card">
+    <div class="gallery-grid">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-1.jpg" alt="Pashmina Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Silver+Medallion+Stole';">
+          <img src="assets/pashmina-1.jpg" alt="Silver Medallion Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Silver+Medallion+Stole';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Silver Medallion Stole</h3>
           <span>Pure Pashmina</span>
         </div>
       </div>
 
-      <div class="atelier-card">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-2.jpg" alt="Kani Paisley Shawl" onerror="this.src='https://via.placeholder.com/400x500.png?text=Multicolour+Kani+Paisley';">
+          <img src="assets/pashmina-2.jpg" alt="Multicolour Kani Paisley" onerror="this.src='https://via.placeholder.com/400x500.png?text=Multicolour+Kani+Paisley';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Multicolour Kani Paisley</h3>
           <span>Traditional Kani Weave</span>
         </div>
       </div>
 
-      <div class="atelier-card">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-3.jpg" alt="Sozni Embroidered Shawl" onerror="this.src='https://via.placeholder.com/400x500.png?text=Pink+Floral+Border+Pashmina';">
+          <img src="assets/pashmina-3.jpg" alt="Pink Floral Border Pashmina" onerror="this.src='https://via.placeholder.com/400x500.png?text=Pink+Floral+Border+Pashmina';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Pink Floral Border Pashmina</h3>
           <span>Needlework Sozni</span>
         </div>
       </div>
 
-      <div class="atelier-card">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-4.jpg" alt="Beige Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Beige+Repeat+Pattern+Stole';">
+          <img src="assets/pashmina-4.jpg" alt="Beige Repeat Pattern Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Beige+Repeat+Pattern+Stole';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Beige Repeat Pattern Stole</h3>
           <span>Fine Wool Blend</span>
         </div>
       </div>
 
-      <div class="atelier-card">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-5.jpg" alt="Kalamkari Pashmina" onerror="this.src='https://via.placeholder.com/400x500.png?text=Royal+Kalamkari+Pashmina';">
+          <img src="assets/pashmina-5.jpg" alt="Royal Kalamkari Pashmina" onerror="this.src='https://via.placeholder.com/400x500.png?text=Royal+Kalamkari+Pashmina';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Royal Kalamkari Pashmina</h3>
           <span>Hand-Painted Art</span>
         </div>
       </div>
 
-      <div class="atelier-card">
+      <div class="product-card">
         <div class="img-box">
-          <img src="assets/pashmina-6.jpg" alt="Embroidered Suit" onerror="this.src='https://via.placeholder.com/400x500.png?text=Handcrafted+Wool+Suit';">
+          <img src="assets/pashmina-6.jpg" alt="Handcrafted Wool Suit" onerror="this.src='https://via.placeholder.com/400x500.png?text=Handcrafted+Wool+Suit';">
         </div>
-        <div class="atelier-meta">
+        <div class="product-info">
           <h3>Handcrafted Wool Suit</h3>
+          <span>Tailored Apparel</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SAFFRON SECTION ============ -->
-<section class="saffron-royal" id="saffron">
-  <div class="section-inner">
-    <div class="saffron-content-box">
-      <div class="saffron-info">
-        <div class="royal-crest">Pure Kashmiri Produce</div>
-        <h2>Gold of the Earth: Kashmiri Saffron</h2>
-        <p>Harvested by hand from the fields of Kashmir. Every gram is selected for its intense crimson hue, unmatched aroma, and certified purity.</p>
-        <a href="https://wa.me/918899789606?text=Hello,%20I%20would%20like%20to%20enquire%20about%20Pure%20Kashmiri%20Saffron" class="btn-royal">Enquire Saffron Pricing &rarr;</a>
+<!-- ============ SAFFRON ============ -->
+<section class="saffron-clean" id="saffron">
+  <div class="container">
+    <div class="saffron-wrapper">
+      <div class="saffron-left">
+        <span class="sub-heading">Certified Origin</span>
+        <h2>Pure Organic Saffron</h2>
+        <p>Hand-harvested from Pampore fields. Renowned worldwide for its natural aroma, rich color, and purity standard.</p>
+        <a href="https://wa.me/918899789606?text=Hello,%20I%20would%20like%20to%20enquire%20about%20Pure%20Kashmiri%20Saffron" class="btn-primary">Enquire Saffron &rarr;</a>
       </div>
 
-      <div class="saffron-badge-card">
-        <div class="royal-crest">Certified Standard</div>
+      <div class="saffron-card-white">
+        <span class="sub-heading">Direct Ordering</span>
         <h3>House of Hakak</h3>
-        <p>Available in retail gift tins and bulk wholesale orders shipped worldwide.</p>
-        <a href="https://wa.me/918899789606" class="btn-royal-outline">WhatsApp Direct Order</a>
+        <p>Retail tin boxes &amp; wholesale bulk quantities shipped worldwide.</p>
+        <a href="https://wa.me/918899789606" class="btn-secondary">WhatsApp Order</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ OUTLETS ============ -->
-<section class="outlets-royal" id="outlets">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="royal-crest">Locations</div>
-      <h2>Visit Our Outlets</h2>
-      <p>Experience our heritage weaves and saffron in person at our boutiques.</p>
+<section class="outlets-clean" id="outlets">
+  <div class="container">
+    <div class="section-intro" style="margin-bottom: 40px;">
+      <span class="sub-heading">Visit Us</span>
+      <h2>Boutique Locations</h2>
     </div>
 
     <div class="outlets-grid">
-      <div class="outlet-box">
+      <div class="outlet-item">
         <h3>New Delhi</h3>
         <p>Lajpat Nagar</p>
       </div>
-      <div class="outlet-box">
+      <div class="outlet-item">
         <h3>Srinagar</h3>
         <p>Below SBI Bank, Dalgate</p>
       </div>
-      <div class="outlet-box">
+      <div class="outlet-item">
         <h3>Srinagar</h3>
         <p>Hari Singh High Street</p>
       </div>
-      <div class="outlet-box">
+      <div class="outlet-item">
         <h3>Srinagar</h3>
         <p>Buchpora — 190020</p>
       </div>
@@ -437,19 +410,19 @@
   </div>
 </section>
 
-<!-- ============ CONTACT / CTA ============ -->
-<section class="royal-contact" id="contact">
-  <div class="section-inner">
-    <div class="royal-crest">Personal Concierge</div>
-    <h2>Bespoke Enquiries &amp; Orders</h2>
-    <p>Contact our concierge directly on WhatsApp for catalogue requests, bespoke shawl embroidery, or saffron orders.</p>
-    <a href="https://wa.me/918899789606" class="btn-royal">Connect via WhatsApp: +91 88997 89606</a>
+<!-- ============ CONTACT ============ -->
+<section class="cta-clean" id="contact">
+  <div class="container">
+    <span class="sub-heading">Personalized Support</span>
+    <h2>Concierge Services</h2>
+    <p>Contact our team on WhatsApp for catalogue access, custom embroidery requests, or global shipping details.</p>
+    <a href="https://wa.me/918899789606" class="btn-primary">Contact via WhatsApp</a>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
-  <div class="section-inner">
+  <div class="container">
     <p>&copy; <span id="yr"></span> HOUSE OF HAKAK · EST. 1960 · SRINAGAR &amp; NEW DELHI</p>
   </div>
 </footer>
@@ -458,7 +431,7 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   const header = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    header.classList.toggle('scrolled', window.scrollY > 30);
   }, { passive: true });
 </script>
 </body>
