@@ -1,438 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>House of Hakak — Fine Pashmina & Certified Kashmiri Saffron | Est. 1960</title>
-<meta name="description" content="House of Hakak — Three generations of Kashmir's finest craftsmanship. Founded by Habibullah Hakak in 1960. Pure Changthangi Pashmina and certified Saffron.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  /* ============ LIGHT LUXURY DESIGN TOKENS ============ */
-  :root {
-    --bg-main: #FAF8F5;
-    --bg-card: #FFFFFF;
-    --bg-accent: #F3EFEA;
-    
-    --text-primary: #1A1A1A;
-    --text-muted: #666057;
-    --text-light: #8C857B;
-    
-    --accent-gold: #C5A059;
-    --accent-gold-light: #E8D8B8;
-    --border-light: #E5DFC8;
-    --border-subtle: #EAE6DF;
-    
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'Montserrat', sans-serif;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House of Hakak | Handcrafted Pashmina & Kashmiri Saffron</title>
+  <style>
+    /* Styling resets & core variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #FAF8F5;
+      color: #2C2C2C;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
 
-  /* ============ BASE RESET & TYPOGRAPHY ============ */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-size: 15px;
-    line-height: 1.8;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-  img { max-width: 100%; display: block; }
+    /* Header & Navigation */
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #EAE6DF;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1A1A1A;
+    }
 
-  .container { max-width: 1280px; margin: 0 auto; padding: 0 5vw; }
-  
-  .sub-heading {
-    font-family: var(--font-body);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    margin-bottom: 12px;
-    display: block;
-  }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #F4EFEA;
+      margin-bottom: 40px;
+    }
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #666;
+    }
 
-  h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    color: var(--text-primary);
-    line-height: 1.2;
-  }
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 40px;
+    }
 
-  /* Buttons */
-  .btn-primary {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
-    text-transform: uppercase; background: var(--text-primary); color: #FFFFFF;
-    padding: 16px 36px; border: 1px solid var(--text-primary);
-    transition: all 0.3s ease;
-  }
-  .btn-primary:hover {
-    background: transparent; color: var(--text-primary); transform: translateY(-2px);
-  }
+    /* Legacy Section (Grandfather Photo) */
+    .legacy-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      background: #FFFFFF;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .legacy-image-frame {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .legacy-image-frame img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    .legacy-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .legacy-text h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #1A1A1A;
+    }
+    .legacy-text p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 15px;
+    }
 
-  .btn-secondary {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
-    text-transform: uppercase; background: transparent; color: var(--text-primary);
-    padding: 16px 36px; border: 1px solid var(--text-primary);
-    transition: all 0.3s ease;
-  }
-  .btn-secondary:hover {
-    background: var(--text-primary); color: #FFFFFF; transform: translateY(-2px);
-  }
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #FFFFFF;
+      border: 1px solid #EAE6DF;
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    .img-box {
+      width: 100%;
+      height: 320px;
+      background-color: #F9F9F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+    .img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #222;
+    }
+    .product-info span {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  /* ============ HEADER ============ */
-  header.site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    padding: 24px 5vw; transition: all 0.3s ease;
-    background: rgba(250, 248, 245, 0.85); backdrop-filter: blur(10px);
-    border-bottom: 1px solid transparent;
-  }
-  header.site-header.scrolled {
-    padding: 16px 5vw; background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid var(--border-subtle);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-  }
-  .nav-wrapper { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
-  
-  .brand-logo { text-align: center; }
-  .brand-logo .title { font-family: var(--font-heading); font-size: 1.9rem; color: var(--text-primary); font-weight: 500; letter-spacing: 0.05em; line-height: 1; }
-  .brand-logo .subtitle { font-family: var(--font-body); font-size: 0.55rem; letter-spacing: 0.3em; color: var(--text-light); text-transform: uppercase; margin-top: 4px; }
-
-  nav.nav-menu { display: flex; gap: 36px; }
-  nav.nav-menu a {
-    font-family: var(--font-body); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); position: relative; padding-bottom: 4px;
-  }
-  nav.nav-menu a:hover { color: var(--text-primary); }
-  nav.nav-menu a::after {
-    content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 1px; background: var(--text-primary); transition: width 0.3s ease;
-  }
-  nav.nav-menu a:hover::after { width: 100%; }
-
-  /* ============ HERO SECTION ============ */
-  .hero-clean {
-    padding-top: 170px; padding-bottom: 100px; background: var(--bg-main);
-    border-bottom: 1px solid var(--border-subtle);
-  }
-  .hero-title-area { text-align: center; max-width: 800px; margin: 0 auto 70px; }
-  .hero-title-area h1 { font-size: clamp(2.8rem, 5.5vw, 4.5rem); margin-bottom: 20px; font-weight: 300; }
-  .hero-title-area p { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; max-width: 650px; margin: 0 auto; }
-
-  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-  .hero-card {
-    position: relative; background: var(--bg-card); border: 1px solid var(--border-subtle);
-    padding: 50px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 520px;
-    transition: all 0.4s ease; overflow: hidden;
-  }
-  .hero-card:hover { border-color: var(--accent-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.04); }
-  .hero-card .bg-img {
-    position: absolute; inset: 0; background-size: cover; background-position: center;
-    opacity: 0.12; transition: transform 0.6s ease, opacity 0.6s ease;
-  }
-  .hero-card:hover .bg-img { transform: scale(1.04); opacity: 0.18; }
-  .hero-card-content { position: relative; z-index: 2; }
-  .hero-card-content h2 { font-size: 2.5rem; margin-bottom: 12px; }
-  .hero-card-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
-
-  /* ============ LEGACY ============ */
-  .legacy-clean { padding: 120px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); }
-  .legacy-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
-  .legacy-image-frame {
-    position: relative; padding: 12px; background: var(--bg-main); border: 1px solid var(--border-subtle);
-  }
-  .legacy-image-frame img { width: 100%; height: auto; filter: grayscale(100%); transition: filter 0.5s ease; }
-  .legacy-image-frame:hover img { filter: grayscale(0%); }
-  .legacy-text h2 { font-size: 3.2rem; margin-bottom: 24px; font-weight: 300; }
-  .legacy-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; font-weight: 300; }
-
-  /* ============ GALLERY ============ */
-  .gallery-clean { padding: 120px 0; background: var(--bg-main); }
-  .section-intro { text-align: center; max-width: 650px; margin: 0 auto 70px; }
-  .section-intro h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
-  .section-intro p { color: var(--text-muted); font-size: 1rem; font-weight: 300; }
-
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-  .product-card {
-    background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px;
-    transition: all 0.3s ease;
-  }
-  .product-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
-  .product-card .img-box {
-    aspect-ratio: 4/5; overflow: hidden; background: #F5F3EF; display: flex; align-items: center; justify-content: center;
-  }
-  .product-card .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-  .product-card:hover .img-box img { transform: scale(1.05); }
-  .product-info { text-align: center; padding: 20px 10px 10px; }
-  .product-info h3 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 4px; }
-  .product-info span { font-family: var(--font-heading); font-style: italic; color: var(--text-muted); font-size: 1.1rem; }
-
-  /* ============ SAFFRON HIGHLIGHT ============ */
-  .saffron-clean {
-    padding: 110px 0; background: var(--bg-accent); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
-  }
-  .saffron-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .saffron-left h2 { font-size: 3.4rem; margin-bottom: 20px; font-weight: 300; }
-  .saffron-left p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 30px; font-weight: 300; }
-  
-  .saffron-card-white {
-    background: var(--bg-card); border: 1px solid var(--border-light); padding: 45px; text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-  }
-  .saffron-card-white h3 { font-size: 2.4rem; margin-bottom: 12px; }
-  .saffron-card-white p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
-
-  /* ============ OUTLETS ============ */
-  .outlets-clean { padding: 110px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); }
-  .outlets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; }
-  .outlet-item {
-    background: var(--bg-main); border: 1px solid var(--border-subtle); padding: 30px 20px; text-align: center;
-    transition: all 0.3s ease;
-  }
-  .outlet-item:hover { border-color: var(--accent-gold); background: #FFFFFF; }
-  .outlet-item h3 { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; color: var(--text-primary); }
-  .outlet-item p { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; }
-
-  /* ============ FOOTER & CTA ============ */
-  .cta-clean { padding: 100px 0; text-align: center; background: var(--bg-main); }
-  .cta-clean h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
-  .cta-clean p { color: var(--text-muted); max-width: 550px; margin: 0 auto 35px; font-weight: 300; }
-
-  footer { background: var(--bg-card); border-top: 1px solid var(--border-subtle); padding: 35px 0; text-align: center; }
-  footer p { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-light); text-transform: uppercase; }
-
-  /* Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .outlets-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-grid, .legacy-grid, .saffron-wrapper { grid-template-columns: 1fr; gap: 40px; }
-  }
-  @media (max-width: 768px) {
-    nav.nav-menu { display: none; }
-    .gallery-grid, .outlets-grid { grid-template-columns: 1fr; }
-  }
-</style>
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #1A1A1A;
+      color: #AAAAAA;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header" id="siteHeader">
-  <div class="nav-wrapper">
-    <a href="#top" class="brand-logo">
-      <div class="title">House of Hakak</div>
-      <div class="subtitle">Srinagar · Est. 1960</div>
-    </a>
-    <nav class="nav-menu">
-      <a href="#about">Legacy</a>
-      <a href="#pashmina">Pashmina</a>
-      <a href="#saffron">Saffron</a>
-      <a href="#outlets">Outlets</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>House of Hakak</h1>
+  </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero-clean" id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Three Generations of Pure Craft</h2>
+    <p>Authentic Kashmiri Pashmina & Organic Mongra Saffron</p>
+  </section>
+
   <div class="container">
-    <div class="hero-title-area">
-      <span class="sub-heading">Kashmiri Atelier</span>
-      <h1>Authentic Pashmina &amp; Saffron</h1>
-      <p>Three generations of pure handloom craftsmanship through HK Shawls and authentic Kashmiri agricultural treasures via Kashmir Foods, preserved since 1960.</p>
-    </div>
 
-    <div class="hero-grid">
-      <div class="hero-card">
-        <div class="bg-img" style="background-image: url('assets/pashmina-1.jpg');"></div>
-        <div class="hero-card-content">
-          <span class="sub-heading">HK Shawls</span>
-          <h2>Pure Pashmina</h2>
-          <p>Hand-spun Changthangi cashmere woven with intricate Sozni needlework and Kani craft, now reaching over 10,000 homes in four countries.</p>
-          <a href="#pashmina" class="btn-primary">Explore Shawls</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="bg-img" style="background-image: url('assets/pashmina-2.jpg');"></div>
-        <div class="hero-card-content">
-          <span class="sub-heading">Kashmir Foods</span>
-          <h2>Kashmiri Saffron</h2>
-          <p>Grade-A organic Pamposh Mongra crimson threads and dry fruits harvested directly from Pampore fields.</p>
-          <a href="#saffron" class="btn-secondary">View Saffron</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LEGACY ============ -->
-<section class="legacy-clean" id="about">
-  <div class="container">
-    <div class="legacy-grid">
+    <!-- LEGACY SECTION (GRANDFATHER) -->
+    <section class="legacy-section">
       <div class="legacy-image-frame">
-        <img src="assets/habibulal-hakak.jpg" alt="Habibullah Hakak" onerror="this.src='https://via.placeholder.com/400x500.png?text=Habibullah+Hakak';">
+        <img src="assets/habibulal-hakak.jpg" alt="Habibullah Hakak" onerror="this.src='assets/habibulal-hakak.png';">
       </div>
       <div class="legacy-text">
-        <span class="sub-heading">Heritage &amp; Lineage</span>
-        <h2>Three Generations of Pure Craft</h2>
-        <p>Founded in 1960 by <strong>Habibullah Hakak</strong>, House of Hakak was built on vision, grit, and an unyielding commitment to Kashmiri heritage. Born in Downtown Srinagar and educated at Islamia School Gojwara, Habibullah Hakak set out to New Delhi without family backing or financial leverage, starting our trade on a micro scale.</p>
-        <p>Through sheer perseverance, that humble beginning expanded into <strong>HK Shawls</strong> and <strong>Kashmir Foods</strong>—touching over 10,000 households globally. Today, spanning three generations, we remain dedicated to uncompromised pure handlooms, master Sozni needlework, and certified organic saffron.</p>
+        <h3>Our Heritage — Habibullah Hakak</h3>
+        <p>From downtown Srinagar to crafting timeless pieces, House of Hakak was built on pure artistry, uncompromised quality, and dedication to traditional Kashmiri craftsmanship.</p>
+        <p>Every shawl and thread of saffron represents decades of honor, luxury, and heritage.</p>
       </div>
-    </div>
+    </section>
+
+    <!-- PRODUCT GALLERY -->
+    <section id="collection">
+      <h2 class="section-title">Our Collections</h2>
+      <p class="section-subtitle">Explore Hand-Crafted Pashminas & Pure Saffron</p>
+
+      <div class="product-grid">
+
+        <!-- SHAWL 1 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-1.jpg" alt="Silver Medallion Stole" onerror="this.src='assets/pashmina-1.png';">
+          </div>
+          <div class="product-info">
+            <h3>Silver Medallion Stole</h3>
+            <span>Pure Pashmina</span>
+          </div>
+        </div>
+
+        <!-- SHAWL 2 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-2.jpg" alt="Classic Needlework Shawl" onerror="this.src='assets/pashmina-2.png';">
+          </div>
+          <div class="product-info">
+            <h3>Classic Needlework Shawl</h3>
+            <span>Hand-Embroidered Pashmina</span>
+          </div>
+        </div>
+
+        <!-- SHAWL 3 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-3.jpg" alt="Heritage Sozni Stole" onerror="this.src='assets/pashmina-3.png';">
+          </div>
+          <div class="product-info">
+            <h3>Heritage Sozni Stole</h3>
+            <span>Pure Kashmiri Cashmere</span>
+          </div>
+        </div>
+
+        <!-- SHAWL 4 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-4.jpg" alt="Royal Ivory Wrap" onerror="this.src='assets/pashmina-4.png';">
+          </div>
+          <div class="product-info">
+            <h3>Royal Ivory Wrap</h3>
+            <span>Pure Handwoven Pashmina</span>
+          </div>
+        </div>
+
+        <!-- SHAWL 5 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-5.jpg" alt="Floral Kalamkari Shawl" onerror="this.src='assets/pashmina-5.png';">
+          </div>
+          <div class="product-info">
+            <h3>Floral Kalamkari Shawl</h3>
+            <span>Artisanal Pashmina</span>
+          </div>
+        </div>
+
+        <!-- SHAWL 6 -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/pashmina-6.jpg" alt="Classic Border Wrap" onerror="this.src='assets/pashmina-6.png';">
+          </div>
+          <div class="product-info">
+            <h3>Classic Border Wrap</h3>
+            <span>Traditional Pashmina</span>
+          </div>
+        </div>
+
+        <!-- SAFFRON CARD -->
+        <div class="product-card">
+          <div class="img-box">
+            <img src="assets/saffron.jpg" alt="Pure Kashmiri Saffron" onerror="this.src='assets/saffron.png';">
+          </div>
+          <div class="product-info">
+            <h3>Pure Kashmiri Mongra Saffron</h3>
+            <span>Grade-A1 Organic Threads</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
-</section>
 
-<!-- ============ GALLERY ============ -->
-<section class="gallery-clean" id="pashmina">
-  <div class="container">
-    <div class="section-intro">
-      <span class="sub-heading">HK Shawls Collection</span>
-      <h2>Fine Textiles</h2>
-      <p>Every piece is individually handcrafted by master weavers in the Kashmir Valley.</p>
-    </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; House of Hakak. All rights reserved.</p>
+  </footer>
 
-    <div class="gallery-grid">
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-1.jpg" alt="Silver Medallion Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Silver+Medallion+Stole';">
-        </div>
-        <div class="product-info">
-          <h3>Silver Medallion Stole</h3>
-          <span>Pure Pashmina</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-2.jpg" alt="Multicolour Kani Paisley" onerror="this.src='https://via.placeholder.com/400x500.png?text=Multicolour+Kani+Paisley';">
-        </div>
-        <div class="product-info">
-          <h3>Multicolour Kani Paisley</h3>
-          <span>Traditional Kani Weave</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-3.jpg" alt="Pink Floral Border Pashmina" onerror="this.src='https://via.placeholder.com/400x500.png?text=Pink+Floral+Border+Pashmina';">
-        </div>
-        <div class="product-info">
-          <h3>Pink Floral Border Pashmina</h3>
-          <span>Needlework Sozni</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-4.jpg" alt="Beige Repeat Pattern Stole" onerror="this.src='https://via.placeholder.com/400x500.png?text=Beige+Repeat+Pattern+Stole';">
-        </div>
-        <div class="product-info">
-          <h3>Beige Repeat Pattern Stole</h3>
-          <span>Fine Wool Blend</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-5.jpg" alt="Royal Kalamkari Pashmina" onerror="this.src='https://via.placeholder.com/400x500.png?text=Royal+Kalamkari+Pashmina';">
-        </div>
-        <div class="product-info">
-          <h3>Royal Kalamkari Pashmina</h3>
-          <span>Hand-Painted Art</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="assets/pashmina-6.jpg" alt="Handcrafted Wool Suit" onerror="this.src='https://via.placeholder.com/400x500.png?text=Handcrafted+Wool+Suit';">
-        </div>
-        <div class="product-info">
-          <h3>Handcrafted Wool Suit</h3>
-          <span>Tailored Apparel</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SAFFRON ============ -->
-<section class="saffron-clean" id="saffron">
-  <div class="container">
-    <div class="saffron-wrapper">
-      <div class="saffron-left">
-        <span class="sub-heading">Kashmir Foods</span>
-        <h2>Pure Organic Saffron</h2>
-        <p>Hand-harvested Pamposh Mongra Saffron directly from Pampore fields. Renowned worldwide for its rich crimson color, natural aroma, and unadulterated purity.</p>
-        <a href="https://wa.me/918899789606?text=Hello,%20I%20would%20like%20to%20enquire%20about%20Pure%20Kashmiri%20Saffron" class="btn-primary">Enquire Saffron &rarr;</a>
-      </div>
-
-      <div class="saffron-card-white">
-        <span class="sub-heading">Direct Ordering</span>
-        <h3>House of Hakak</h3>
-        <p>Retail tin boxes &amp; wholesale bulk quantities shipped worldwide.</p>
-        <a href="https://wa.me/918899789606" class="btn-secondary">WhatsApp Order</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ OUTLETS ============ -->
-<section class="outlets-clean" id="outlets">
-  <div class="container">
-    <div class="section-intro" style="margin-bottom: 40px;">
-      <span class="sub-heading">Visit Us</span>
-      <h2>Boutique Locations</h2>
-    </div>
-
-    <div class="outlets-grid">
-      <div class="outlet-item">
-        <h3>New Delhi</h3>
-        <p>Lajpat Nagar</p>
-      </div>
-      <div class="outlet-item">
-        <h3>Srinagar</h3>
-        <p>Below SBI Bank, Dalgate</p>
-      </div>
-      <div class="outlet-item">
-        <h3>Srinagar</h3>
-        <p>Hari Singh High Street</p>
-      </div>
-      <div class="outlet-item">
-        <h3>Srinagar</h3>
-        <p>Buchpora — 190020</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="cta-clean" id="contact">
-  <div class="container">
-    <span class="sub-heading">Personalized Support</span>
-    <h2>Concierge Services</h2>
-    <p>Contact our team on WhatsApp for catalogue access, custom embroidery requests, or global shipping details.</p>
-    <a href="https://wa.me/918899789606" class="btn-primary">Contact via WhatsApp</a>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="container">
-    <p>&copy; <span id="yr"></span> HOUSE OF HAKAK · EST. 1960 BY HABIBULLAH HAKAK · SRINAGAR &amp; NEW DELHI</p>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 30);
-  }, { passive: true });
-</script>
 </body>
 </html>
