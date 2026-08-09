@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>House of Hakak | HK Shawls & Kashmir Foods</title>
+  <title>House of Hakak | Since 1960 | HK Shawls & Kashmir Foods</title>
   
+  <!-- Meta Descriptions for Social Previews -->
+  <meta name="description" content="House of Hakak - A luxury of its own since 1960. Handcrafted Kashmiri Pashmina shawls, fine Sozni needlework, and pure Pamposh Mongra Saffron from Srinagar.">
+  <meta property="og:title" content="House of Hakak | Est. 1960">
+  <meta property="og:description" content="Authentic Kashmiri Pashmina Shawls & Pure Saffron straight from Srinagar.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* CSS RESET & VARIABLES */
@@ -68,7 +73,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 80px;
+      height: 85px;
     }
 
     .logo {
@@ -86,7 +91,8 @@
       font-size: 10px;
       letter-spacing: 3px;
       color: var(--accent-gold);
-      margin-top: -4px;
+      margin-top: -2px;
+      font-weight: 500;
     }
 
     .nav-links {
@@ -107,9 +113,9 @@
       color: var(--accent-gold);
     }
 
-    /* HERO SECTION */
+    /* HERO / STORY SECTION */
     .hero {
-      padding: 90px 0 60px;
+      padding: 90px 0 70px;
       text-align: center;
     }
 
@@ -128,13 +134,43 @@
       font-size: 52px;
       font-weight: 500;
       line-height: 1.2;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       color: var(--accent-dark);
+    }
+
+    .tagline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--accent-gold);
+      margin-bottom: 32px;
+    }
+
+    .story-content {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: left;
+      background: #FFFFFF;
+      padding: 40px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .story-content p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .story-content p:last-child {
+      margin-bottom: 0;
     }
 
     /* GALLERY SECTION */
     .gallery-clean {
-      padding: 60px 0 100px;
+      padding: 70px 0 80px;
     }
 
     .section-intro {
@@ -223,6 +259,64 @@
       font-weight: 500;
     }
 
+    /* KASHMIR FOODS SECTION */
+    .kashmir-foods-section {
+      background: #FFFFFF;
+      padding: 80px 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .foods-box {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* INSTAGRAM LINKS / BUTTONS */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--accent-dark);
+      color: var(--accent-dark);
+      padding: 12px 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-dark);
+      color: #FFFFFF;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      background: #9A7238;
+    }
+
     /* FOOTER */
     footer {
       background-color: var(--accent-dark);
@@ -231,7 +325,6 @@
       text-align: center;
       font-size: 13px;
       letter-spacing: 1px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     footer p {
@@ -248,6 +341,10 @@
       .hero h1 {
         font-size: 42px;
       }
+
+      .story-content {
+        padding: 24px;
+      }
     }
 
     @media (max-width: 600px) {
@@ -263,6 +360,10 @@
       .hero h1 {
         font-size: 32px;
       }
+
+      .btn-group {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -273,12 +374,12 @@
     <div class="container nav-wrapper">
       <div class="logo">
         House of Hakak
-        <span>HK Shawls &bull; Kashmir Foods</span>
+        <span>EST. 1960 &bull; SRINAGAR</span>
       </div>
       <ul class="nav-links">
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#pashmina">Shawls Collection</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Our Legacy</a></li>
+        <li><a href="#pashmina">HK Shawls</a></li>
+        <li><a href="#kashmir-foods">Kashmir Foods</a></li>
       </ul>
     </div>
   </header>
@@ -286,14 +387,26 @@
   <!-- HERO / OUR STORY SECTION -->
   <section class="hero" id="about">
     <div class="container">
-      <span class="sub-heading">Heritage &amp; Artisan Craft</span>
+      <span class="sub-heading">Three-Generation Heritage</span>
       <h1>House of Hakak</h1>
-      <p style="max-width: 780px; margin: 0 auto 20px; color: var(--text-muted); font-size: 16px;">
-        Rooted in Downtown Srinagar, <strong>House of Hakak</strong> brings together centuries of valley craft and heritage. Through <strong>HK Shawls</strong>, we preserve fine textile artistry—offering pure hand-loomed Pashmina, delicate Sozni needlework, and heritage Kani weaves.
-      </p>
-      <p style="max-width: 780px; margin: 0 auto; color: var(--text-muted); font-size: 15px; font-style: italic;">
-        Our legacy also celebrates Kashmir’s finest culinary treasures through <strong>Kashmir Foods</strong>—delivering authentic Pamposh Mongra Saffron, premium walnuts, and organic valley produce directly to you.
-      </p>
+      <div class="tagline">A Luxury of Its Own Since 1960</div>
+      
+      <div class="story-content">
+        <p>
+          Founded in <strong>1960</strong> by <strong>Habibullah Hakak</strong>, the story of <strong>House of Hakak</strong> is one of resilience, vision, and unyielding dedication to Kashmiri craftsmanship. Born in downtown Srinagar and educated at Islamia School Gojwara, Habibullah Hakak took a bold step forward—moving to New Delhi without family backing to establish our trade on a micro scale.
+        </p>
+        <p>
+          Through sheer perseverance, that micro endeavor evolved into <strong>HK Shawls</strong>, a name now cherished across more than 10,000 homes in four countries. Through HK Shawls, we continue to preserve Kashmir’s grandest textile traditions: pure hand-loomed Pashmina, delicate Sozni needlework, and heritage Kani weaves crafted by master artisans.
+        </p>
+        <p>
+          Spanning three generations, our family legacy also honors the pure culinary treasures of the valley through <strong>Kashmir Foods</strong>—delivering authentic Mongra Saffron, organic dry fruits, and traditional spices directly from Srinagar to the world.
+        </p>
+
+        <div class="btn-group" style="margin-top: 30px;">
+          <a href="https://www.instagram.com/hkshawls.newdelhi" target="_blank" class="btn-outline">Instagram @hkshawls.newdelhi</a>
+          <a href="https://www.instagram.com/kashmirfoods" target="_blank" class="btn-outline">Instagram @kashmirfoods</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -373,13 +486,31 @@
           </div>
         </div>
       </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://www.instagram.com/hkshawls.newdelhi" target="_blank" class="btn-gold">View More on Instagram @hkshawls.newdelhi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KASHMIR FOODS SECTION -->
+  <section class="kashmir-foods-section" id="kashmir-foods">
+    <div class="container">
+      <div class="foods-box">
+        <span class="sub-heading" style="font-size: 11px; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-gold); font-weight: 600;">Pure Kashmiri Treasures</span>
+        <h2 style="font-family: var(--font-heading); font-size: 38px; font-weight: 500; margin: 8px 0 16px;">Kashmir Foods</h2>
+        <p style="color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+          Bringing you 100% authentic Pamposh Mongra Saffron, hand-picked Kashmiri walnuts, almonds, and traditional spices directly from the valley.
+        </p>
+        <a href="https://www.instagram.com/kashmirfoods" target="_blank" class="btn-outline">Explore @kashmirfoods on Instagram</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer id="contact">
+  <footer>
     <div class="container">
-      <p>&copy; 2026 House of Hakak (HK Shawls &amp; Kashmir Foods). All rights reserved. Srinagar, Kashmir.</p>
+      <p>&copy; 2026 House of Hakak (HK Shawls &amp; Kashmir Foods). Founded 1960 by Habibullah Hakak. Srinagar, Kashmir.</p>
     </div>
   </footer>
 
