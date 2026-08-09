@@ -7,20 +7,21 @@
 <meta name="description" content="House of Hakak — three generations of Kashmiri craft. Pashmina shawls, wool suits & jackets, Kashmiri art, and hand-picked saffron, since 1960.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --indigo: #1B2340;
-    --indigo-deep: #131A31;
+    --indigo: #4A0E28;
+    --indigo-deep: #300A1A;
     --saffron: #E29B3E;
     --saffron-light: #F0BA6C;
-    --wine: #7A2331;
+    --wine: #9C2B44;
     --walnut: #4A2F1C;
-    --ivory: #F5EEDD;
-    --ivory-dim: #EBE1C9;
+    --ivory: #F8F0E3;
+    --ivory-dim: #EFE3CD;
     --gold: #C9A227;
     --line: rgba(201,162,39,0.35);
     --display: 'Marcellus', serif;
+    --script: 'Cormorant Garamond', serif;
     --body: 'Frank Ruhl Libre', serif;
     --utility: 'Jost', sans-serif;
   }
@@ -84,7 +85,7 @@
   }
   .brand-mark{display:flex;align-items:center;gap:12px;color:var(--ivory);}
   .brand-mark svg{width:34px;height:34px;color:var(--saffron);}
-  .brand-mark .name{font-family:var(--display);font-size:1.15rem;letter-spacing:0.03em;color:var(--ivory);}
+  .brand-mark .name{font-family:var(--script);font-style:italic;font-weight:600;font-size:1.5rem;letter-spacing:0.01em;color:var(--ivory);}
   nav.links{display:flex;gap:34px;}
   nav.links a{
     font-family:var(--utility); font-size:0.78rem; text-transform:uppercase;
@@ -117,12 +118,15 @@
   .hero-inner{position:relative; z-index:2; max-width:780px;}
   .hero .eyebrow{color:var(--saffron-light); margin-bottom:22px; opacity:0; animation:riseIn .9s ease forwards; animation-delay:.15s;}
   .hero h1{
-    font-size:clamp(3rem, 8vw, 6rem);
-    line-height:1.02;
+    font-family:var(--script);
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(3.2rem, 9vw, 6.6rem);
+    line-height:1.05;
     color:var(--ivory);
     opacity:0; animation:riseIn 1s ease forwards; animation-delay:.35s;
   }
-  .hero h1 em{font-style:normal;color:var(--saffron);}
+  .hero h1 em{font-style:italic;color:var(--saffron);}
   .hero .tagline{
     margin-top:26px; font-size:1.15rem; color:var(--ivory-dim); max-width:560px;
     margin-left:auto;margin-right:auto;
@@ -162,10 +166,31 @@
     display:flex; align-items:center; justify-content:center; overflow:hidden;
   }
   .story-figure svg{width:58%; color:var(--saffron-light); opacity:0.9;}
-  .story-figure::after{
-    content:'HABIBULAL HAKAK';
-    position:absolute; bottom:22px; left:0; right:0; text-align:center;
-    font-family:var(--utility); font-size:0.7rem; letter-spacing:0.2em; color:var(--ivory-dim); opacity:0.85;
+  .story-figure img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+  .story-figure .fig-caption{
+    position:absolute; bottom:22px; left:0; right:0; text-align:center; z-index:2;
+    font-family:var(--utility); font-size:0.7rem; letter-spacing:0.2em; color:var(--ivory-dim); opacity:0.9;
+    text-shadow:0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  /* ---------- Pashmina / Saffron gallery ---------- */
+  .gallery{
+    background:linear-gradient(155deg, var(--ivory-dim) 0%, #F1D9A8 55%, #EAC27E 100%);
+    position:relative;
+  }
+  .gallery .section-head .eyebrow{color:var(--wine);}
+  .gallery .section-head h2{color:var(--indigo);}
+  .gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .gallery-item{
+    position:relative; aspect-ratio:4/5; border-radius:2px; overflow:hidden;
+    background:linear-gradient(160deg, #E8B25E 0%, var(--wine) 100%);
+    box-shadow:0 14px 34px rgba(74,14,40,0.18);
+  }
+  .gallery-item img{width:100%;height:100%;object-fit:cover;}
+  .gallery-item .cap{
+    position:absolute; left:0; right:0; bottom:0; padding:16px 18px;
+    background:linear-gradient(0deg, rgba(48,10,26,0.82) 0%, transparent 100%);
+    font-family:var(--utility); font-size:0.78rem; letter-spacing:0.06em; color:var(--ivory);
   }
   .story-text p{margin-bottom:18px; color:var(--walnut);}
   .story-text .lede{font-size:1.25rem; font-family:var(--display); color:var(--indigo); line-height:1.5; margin-bottom:22px;}
@@ -237,6 +262,7 @@
     padding:34px 6vw; font-family:var(--utility); font-size:0.75rem; letter-spacing:0.06em;
   }
   footer .brand-mark{justify-content:center; margin-bottom:10px; color:var(--ivory);}
+  footer .brand-mark .name{font-size:1.2rem;}
 
   /* ---------- Reveal on scroll ---------- */
   .reveal{opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease;}
@@ -274,6 +300,7 @@
   </a>
   <nav class="links" id="navLinks">
     <a href="#story">Our Story</a>
+    <a href="#gallery">Collection</a>
     <a href="#shawls">Pashmina &amp; Shawls</a>
     <a href="#saffron">Saffron</a>
     <a href="#contact">Contact</a>
@@ -307,29 +334,56 @@
   <div class="section-inner">
     <div class="section-head reveal">
       <div class="eyebrow">Our Story</div>
-      <h2>A name first spoken in 1960</h2>
+      <h2>Born in downtown Srinagar</h2>
     </div>
     <div class="story-grid">
       <div class="story-figure reveal">
-        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+        <!-- Replace src below with your grandfather's photo. Upload the file to an "assets" folder
+             in your repo and name it exactly habibulal-hakak.jpg (or update the filename here). -->
+        <img src="assets/habibulal-hakak.jpg" alt="Habibulal Hakak, founder of House of Hakak" onerror="this.style.display='none'">
+        <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:58%;height:58%;margin:auto;color:var(--saffron-light);opacity:0.9;">
           <path class="buta" stroke-width="1.6" d="M100 10C160 40 180 100 150 160C130 200 80 215 55 190C35 170 45 140 70 135C90 131 100 145 90 160
             M100 10C60 25 40 60 45 95"/>
         </svg>
+        <div class="fig-caption">HABIBULAL HAKAK</div>
       </div>
       <div class="story-text reveal">
-        <p class="lede">Habibulal Hakak began this house in 1960, on the belief that Kashmir's finest work — hand-spun pashm, hand-embroidered wool, and hand-picked saffron — deserved to be carried, not just sold.</p>
-        <p>What started as a single trade has grown into two: <strong>HK Shawls</strong>, devoted to pashmina, wool tailoring and Kashmiri art, and our saffron trade, sourced from the same soil that has always given this family its living. Today, the house is carried forward by the third generation, keeping the same standard Habibulal Hakak set at the start.</p>
+        <p class="lede">Habibulal Hakak was born in the valley of Kashmir, in downtown Srinagar. He studied at Islamia School, Gojwara, up to the 10th standard — with no family business behind him, and no money to fall back on.</p>
+        <p>Wanting to build something of his own, he left home for New Delhi and began selling his goods on the smallest possible scale. What he started alone, with nothing to lean on, has grown into <strong>HK Shawls</strong> — now reaching over 10,000 homes across 4+ countries, alongside the family's saffron trade.</p>
         <div class="timeline">
           <div class="t-item">
-            <div class="yr">1960</div>
-            <p>Habibulal Hakak founds the house on hand-loomed pashmina and Kashmiri craft.</p>
+            <div class="yr">Srinagar</div>
+            <p>Born in downtown Srinagar; educated at Islamia School, Gojwara, till the 10th standard.</p>
+          </div>
+          <div class="t-item">
+            <div class="yr">New Delhi</div>
+            <p>Left home with no family backing and started selling on a micro scale, on his own.</p>
           </div>
           <div class="t-item">
             <div class="yr">Today</div>
-            <p>Two divisions, one standard — HK Shawls and our saffron trade, run by the family that inherited it.</p>
+            <p>HK Shawls reaches 10,000+ homes across 4+ countries, alongside the family's saffron trade.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASHMINA GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Pashmina Collection</div>
+      <h2>Woven in Kashmir, ready to show</h2>
+      <p>This section is set up and waiting — upload your pashmina photos to the "assets" folder in your repo (e.g. pashmina-1.jpg, pashmina-2.jpg…) and they'll drop straight into these frames.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal"><img src="assets/pashmina-1.jpg" alt="Pashmina shawl" onerror="this.style.display='none'"><div class="cap">Pashmina Shawl</div></div>
+      <div class="gallery-item reveal"><img src="assets/pashmina-2.jpg" alt="Pashmina shawl" onerror="this.style.display='none'"><div class="cap">Pashmina Shawl</div></div>
+      <div class="gallery-item reveal"><img src="assets/pashmina-3.jpg" alt="Wool jacket" onerror="this.style.display='none'"><div class="cap">Wool Jacket</div></div>
+      <div class="gallery-item reveal"><img src="assets/pashmina-4.jpg" alt="Pashmina shawl" onerror="this.style.display='none'"><div class="cap">Pashmina Shawl</div></div>
+      <div class="gallery-item reveal"><img src="assets/pashmina-5.jpg" alt="Kashmiri saffron" onerror="this.style.display='none'"><div class="cap">Kashmiri Saffron</div></div>
+      <div class="gallery-item reveal"><img src="assets/pashmina-6.jpg" alt="Wool suit" onerror="this.style.display='none'"><div class="cap">Wool Suit</div></div>
     </div>
   </div>
 </section>
@@ -376,13 +430,13 @@
   <div class="section-inner">
     <div class="craft-item reveal">
       <svg class="buta" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path d="M32 6c14 4 20 16 14 28-4 8-14 10-18 6-3-3-1-8 3-9 3-1 5 1 4 4"/></svg>
-      <h3>Hand-spun, hand-woven</h3>
-      <p>Every pashmina shawl still passes through hand-spinning and hand-loom weaving, the way it did in 1960.</p>
+      <h3>Started from nothing</h3>
+      <p>No family business, no money behind him — Habibulal Hakak built this from a single micro-scale start in New Delhi.</p>
     </div>
     <div class="craft-item reveal">
       <svg class="buta" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path d="M32 6c14 4 20 16 14 28-4 8-14 10-18 6-3-3-1-8 3-9 3-1 5 1 4 4"/></svg>
-      <h3>Family-run, three generations</h3>
-      <p>Founded by Habibulal Hakak, and now run day to day by the family he raised into the trade.</p>
+      <h3>10,000+ homes</h3>
+      <p>HK Shawls has grown to reach over 10,000 homes across 4+ countries.</p>
     </div>
     <div class="craft-item reveal">
       <svg class="buta" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path d="M32 6c14 4 20 16 14 28-4 8-14 10-18 6-3-3-1-8 3-9 3-1 5 1 4 4"/></svg>
@@ -402,10 +456,9 @@
     <h2 class="reveal">Enquire About Shawls or Saffron</h2>
     <p class="lede reveal">Tell us what you're looking for — pashmina, wool tailoring, Kashmiri art, or saffron — and we'll get back to you directly.</p>
     <div class="contact-links reveal">
-      <a href="https://wa.me/91-8899789606" class="cta">WhatsApp Us &rarr;</a>
-      <a href="mailto:hkshawls.newdelhi@gmail.com" class="cta ghost">Email Us &rarr;</a>
+      <a href="https://wa.me/918899789606" class="cta">WhatsApp Us &rarr;</a>
     </div>
-    <p class="note reveal">Phone / WhatsApp, email and address are placeholders — replace with your real details before this goes live.</p>
+    <p class="note reveal">WhatsApp: +91 88997 89606. Add an email or address here any time you'd like one listed too.</p>
   </div>
 </section>
 
@@ -414,7 +467,7 @@
     <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="buta" stroke-width="2" style="width:20px;height:20px;">
       <path d="M32 6c14 4 20 16 14 28-4 8-14 10-18 6-3-3-1-8 3-9 3-1 5 1 4 4"/>
     </svg>
-    House of Hakak
+    <span class="name">House of Hakak</span>
   </div>
   &copy; <span id="yr"></span> House of Hakak &middot; Est. 1960 &middot; HK Shawls &amp; Kashmiri Saffron
 </footer>
