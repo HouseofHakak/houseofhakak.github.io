@@ -3,288 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>House of Hakak | Handcrafted Pashmina & Kashmiri Saffron</title>
+  <title>House of Hakak | HK Shawls</title>
   <style>
-    /* Styling resets & core variables */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #FAF8F5;
-      color: #2C2C2C;
-      line-height: 1.6;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 0;
+    :root {
+      --bg: #FAF8F5;
+      --surface: #FFFFFF;
+      --text: #1C1917;
+      --text-muted: #78716C;
+      --border: #E7E5E4;
+      --accent: #1C1917;
     }
 
-    /* Header & Navigation */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
     header {
-      background: #FFFFFF;
-      border-bottom: 1px solid #EAE6DF;
-      padding: 20px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
       text-align: center;
     }
     header h1 {
-      font-size: 28px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #1A1A1A;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 60px 20px;
-      background-color: #F4EFEA;
-      margin-bottom: 40px;
+      padding: 64px 24px;
     }
     .hero h2 {
       font-size: 36px;
-      margin-bottom: 10px;
-      font-weight: normal;
+      font-weight: 500;
+      margin-bottom: 8px;
     }
     .hero p {
+      color: var(--text-muted);
       font-size: 18px;
-      color: #666;
     }
 
-    /* Section Titles */
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .section-subtitle {
-      text-align: center;
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 40px;
-    }
-
-    /* Legacy Section (Grandfather Photo) */
-    .legacy-section {
+    /* Legacy Banner */
+    .legacy-banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 48px;
       display: flex;
-      flex-wrap: wrap;
+      gap: 32px;
       align-items: center;
-      gap: 40px;
-      margin-bottom: 60px;
-      background: #FFFFFF;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
     .legacy-image-frame {
-      flex: 1;
-      min-width: 300px;
-      text-align: center;
+      flex: 0 0 240px;
     }
     .legacy-image-frame img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
+      width: 100%;
+      height: 300px;
       object-fit: cover;
+      border-radius: 8px;
     }
-    .legacy-text {
-      flex: 1;
-      min-width: 300px;
+    .legacy-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
     }
-    .legacy-text h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #1A1A1A;
-    }
-    .legacy-text p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 15px;
+    .legacy-content p {
+      color: var(--text-muted);
+      margin-bottom: 12px;
     }
 
-    /* Product Grid */
-    .product-grid {
+    /* Grid */
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
     }
     .product-card {
-      background: #FFFFFF;
-      border: 1px solid #EAE6DF;
-      border-radius: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
       overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
     .img-box {
-      width: 100%;
-      height: 320px;
-      background-color: #F9F9F9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
+      aspect-ratio: 4/5;
+      background: #F5F5F4;
     }
     .img-box img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .product-info {
-      padding: 20px;
+      padding: 16px;
     }
     .product-info h3 {
-      font-size: 18px;
-      margin-bottom: 6px;
-      color: #222;
+      font-size: 16px;
+      font-weight: 500;
     }
     .product-info span {
       font-size: 14px;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--text-muted);
     }
 
-    /* Footer */
     footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
       text-align: center;
-      padding: 30px;
-      background: #1A1A1A;
-      color: #AAAAAA;
-      margin-top: 60px;
+      color: var(--text-muted);
       font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .legacy-banner { flex-direction: column; text-align: center; }
+      .legacy-image-frame { flex: initial; width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
-    <h1>House of Hakak</h1>
+    <div class="container">
+      <h1>House of Hakak</h1>
+    </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <h2>Three Generations of Pure Craft</h2>
-    <p>Authentic Kashmiri Pashmina & Organic Mongra Saffron</p>
+    <div class="container">
+      <h2>HK Shawls & Heritage Craft</h2>
+      <p>Three Generations of Pure Craftsmanship</p>
+    </div>
   </section>
 
-  <div class="container">
-
-    <!-- LEGACY SECTION (GRANDFATHER) -->
-    <section class="legacy-section">
+  <main class="container">
+    
+    <!-- LEGACY -->
+    <div class="legacy-banner">
       <div class="legacy-image-frame">
         <img src="assets/habibulal-hakak.jpg" alt="Habibullah Hakak" onerror="this.src='assets/habibulal-hakak.png';">
       </div>
-      <div class="legacy-text">
-        <h3>Our Heritage — Habibullah Hakak</h3>
-        <p>From downtown Srinagar to crafting timeless pieces, House of Hakak was built on pure artistry, uncompromised quality, and dedication to traditional Kashmiri craftsmanship.</p>
-        <p>Every shawl and thread of saffron represents decades of honor, luxury, and heritage.</p>
+      <div class="legacy-content">
+        <h3>Habibullah Hakak</h3>
+        <p>Born in downtown Srinagar, Habibullah Hakak laid the foundation of HK Shawls through uncompromising dedication to authentic craftsmanship. Today, that legacy spans thousands of homes worldwide.</p>
       </div>
-    </section>
+    </div>
 
-    <!-- PRODUCT GALLERY -->
-    <section id="collection">
-      <h2 class="section-title">Our Collections</h2>
-      <p class="section-subtitle">Explore Hand-Crafted Pashminas & Pure Saffron</p>
-
-      <div class="product-grid">
-
-        <!-- SHAWL 1 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-1.jpg" alt="Silver Medallion Stole" onerror="this.src='assets/pashmina-1.png';">
-          </div>
-          <div class="product-info">
-            <h3>Silver Medallion Stole</h3>
-            <span>Pure Pashmina</span>
-          </div>
+    <!-- PRODUCTS -->
+    <h3 class="section-title">Collection</h3>
+    <div class="grid">
+      
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-1.jpg" alt="Pashmina 1" onerror="this.src='assets/pashmina-1.png';">
         </div>
-
-        <!-- SHAWL 2 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-2.jpg" alt="Classic Needlework Shawl" onerror="this.src='assets/pashmina-2.png';">
-          </div>
-          <div class="product-info">
-            <h3>Classic Needlework Shawl</h3>
-            <span>Hand-Embroidered Pashmina</span>
-          </div>
+        <div class="product-info">
+          <h3>Silver Medallion Stole</h3>
+          <span>Pure Pashmina</span>
         </div>
-
-        <!-- SHAWL 3 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-3.jpg" alt="Heritage Sozni Stole" onerror="this.src='assets/pashmina-3.png';">
-          </div>
-          <div class="product-info">
-            <h3>Heritage Sozni Stole</h3>
-            <span>Pure Kashmiri Cashmere</span>
-          </div>
-        </div>
-
-        <!-- SHAWL 4 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-4.jpg" alt="Royal Ivory Wrap" onerror="this.src='assets/pashmina-4.png';">
-          </div>
-          <div class="product-info">
-            <h3>Royal Ivory Wrap</h3>
-            <span>Pure Handwoven Pashmina</span>
-          </div>
-        </div>
-
-        <!-- SHAWL 5 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-5.jpg" alt="Floral Kalamkari Shawl" onerror="this.src='assets/pashmina-5.png';">
-          </div>
-          <div class="product-info">
-            <h3>Floral Kalamkari Shawl</h3>
-            <span>Artisanal Pashmina</span>
-          </div>
-        </div>
-
-        <!-- SHAWL 6 -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/pashmina-6.jpg" alt="Classic Border Wrap" onerror="this.src='assets/pashmina-6.png';">
-          </div>
-          <div class="product-info">
-            <h3>Classic Border Wrap</h3>
-            <span>Traditional Pashmina</span>
-          </div>
-        </div>
-
-        <!-- SAFFRON CARD -->
-        <div class="product-card">
-          <div class="img-box">
-            <img src="assets/saffron.jpg" alt="Pure Kashmiri Saffron" onerror="this.src='assets/saffron.png';">
-          </div>
-          <div class="product-info">
-            <h3>Pure Kashmiri Mongra Saffron</h3>
-            <span>Grade-A1 Organic Threads</span>
-          </div>
-        </div>
-
       </div>
-    </section>
 
-  </div>
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-2.jpg" alt="Pashmina 2" onerror="this.src='assets/pashmina-2.png';">
+        </div>
+        <div class="product-info">
+          <h3>Classic Needlework Shawl</h3>
+          <span>Pure Pashmina</span>
+        </div>
+      </div>
 
-  <!-- FOOTER -->
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-3.jpg" alt="Pashmina 3" onerror="this.src='assets/pashmina-3.png';">
+        </div>
+        <div class="product-info">
+          <h3>Heritage Sozni Stole</h3>
+          <span>Pure Pashmina</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-4.jpg" alt="Pashmina 4" onerror="this.src='assets/pashmina-4.png';">
+        </div>
+        <div class="product-info">
+          <h3>Royal Ivory Wrap</h3>
+          <span>Pure Pashmina</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-5.jpg" alt="Pashmina 5" onerror="this.src='assets/pashmina-5.png';">
+        </div>
+        <div class="product-info">
+          <h3>Floral Kalamkari Shawl</h3>
+          <span>Pure Pashmina</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/pashmina-6.jpg" alt="Pashmina 6" onerror="this.src='assets/pashmina-6.png';">
+        </div>
+        <div class="product-info">
+          <h3>Classic Border Wrap</h3>
+          <span>Pure Pashmina</span>
+        </div>
+      </div>
+
+      <!-- SAFFRON CARD -->
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/saffron.jpg" alt="Kashmiri Saffron" onerror="this.src='assets/saffron.png';">
+        </div>
+        <div class="product-info">
+          <h3>Pure Kashmiri Mongra Saffron</h3>
+          <span>Grade-A1 Organic Threads</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
   <footer>
-    <p>&copy; House of Hakak. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; House of Hakak. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
