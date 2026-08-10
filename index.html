@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>House of Hakak — Luxury Pashmina, Custom Atelier & Saffron | Est. 1960</title>
-<meta name="description" content="House of Hakak — Authentic Pashmina, Heritage Shawl Buyback, Bespoke Custom Shawls, Pashmina Spa Care, and Certified Saffron.">
+<meta name="description" content="House of Hakak — Authentic Pashmina, Heritage Shawl Buyback, Bespoke Custom Shawls, Pashmina Spa Care, 25k+ Artisan Network, and Certified Saffron.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@
   }
   .btn-icon:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
 
-  /* Atmospheric Animated Layers */
+  /* Atmospheric Background Animation */
   .river-flow-bg {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(90deg, rgba(43, 76, 94, 0) 0%, rgba(43, 76, 94, 0.03) 50%, rgba(43, 76, 94, 0) 100%);
@@ -97,22 +97,22 @@
   .nav-wrapper { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
   .brand-logo .title { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 500; letter-spacing: 0.05em; line-height: 1; }
   .brand-logo .subtitle { font-size: 0.55rem; letter-spacing: 0.3em; color: var(--text-light); text-transform: uppercase; margin-top: 4px; }
-  nav.nav-menu { display: flex; gap: 28px; }
-  nav.nav-menu a { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+  nav.nav-menu { display: flex; gap: 24px; }
+  nav.nav-menu a { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
   nav.nav-menu a:hover { color: var(--text-primary); }
 
-  /* Hero */
+  /* Hero Banner */
   .hero-clean {
     position: relative; padding-top: 170px; padding-bottom: 110px;
     background: linear-gradient(180deg, rgba(244, 241, 234, 0.4) 0%, rgba(235, 229, 216, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     background-blend-mode: overlay; border-bottom: 1px solid var(--border-subtle);
   }
-  .hero-title-area { text-align: center; max-width: 850px; margin: 0 auto 60px; position: relative; z-index: 2; }
+  .hero-title-area { text-align: center; max-width: 850px; margin: 0 auto; position: relative; z-index: 2; }
   .hero-title-area h1 { font-size: clamp(2.6rem, 5vw, 4.5rem); margin-bottom: 16px; font-weight: 300; }
   .hero-title-area p { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; max-width: 680px; margin: 0 auto; }
 
-  /* Form Section Overlay Cards */
+  /* Form Sections Grid Layout */
   .feature-form-section { padding: 100px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); position: relative; }
   .form-grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
   .custom-form { background: var(--bg-main); border: 1px solid var(--border-light); padding: 40px; border-radius: 4px; }
@@ -143,14 +143,14 @@
   .product-card .img-box img { width: 100%; height: 100%; object-fit: cover; }
   .product-info { text-align: center; padding: 18px 10px 10px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
 
-  /* Cart Drawer */
+  /* Shopping Cart Drawer */
   .cart-drawer { position: fixed; top: 0; right: -420px; width: 420px; height: 100vh; background: #FFFFFF; border-left: 1px solid var(--border-light); z-index: 2000; display: flex; flex-direction: column; transition: var(--transition); }
   .cart-drawer.open { right: 0; }
   .cart-header { padding: 24px; border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; }
   .cart-items { flex: 1; padding: 24px; overflow-y: auto; }
   .cart-footer { padding: 24px; border-top: 1px solid var(--border-subtle); background: var(--bg-main); }
 
-  /* Responsive */
+  /* Responsive Design */
   @media (max-width: 1024px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } .form-grid-layout, .legacy-grid { grid-template-columns: 1fr; } }
   @media (max-width: 768px) { nav.nav-menu { display: none; } .gallery-grid { grid-template-columns: 1fr; } .cart-drawer { width: 100%; right: -100%; } }
 </style>
@@ -166,11 +166,11 @@
     </a>
     <nav class="nav-menu">
       <a href="#about">Legacy</a>
-      <a href="#custom">Bespoke Design</a>
-      <a href="#spa">Pashmina Spa</a>
+      <a href="#custom">Design Shawl</a>
+      <a href="#spa">Wash Spa</a>
       <a href="#buyback">Sell Heritage</a>
+      <a href="#careers">Careers (25k+)</a>
       <a href="#pashmina">Catalog</a>
-      <a href="#contact">Contact</a>
     </nav>
     <button class="btn-icon" id="cartToggleBtn">Bag (<span id="cartCount">0</span>)</button>
   </div>
@@ -184,90 +184,91 @@
     <div class="hero-title-area">
       <span class="sub-heading">Kashmiri Atelier · Woven by the Jhelum</span>
       <h1>Authentic Pashmina &amp; Saffron</h1>
-      <p>Explore custom woven stoles, legacy restoration spa care, certified heirloom evaluation, and pure Pamposh Saffron.</p>
+      <p>Custom atelier embroidery, organic restoration washing, heritage buybacks, and an interconnected network of over 25,000+ Kashmiri artisans.</p>
     </div>
   </div>
 </section>
 
-<!-- BESPOKE CUSTOMIZATION ATELIER -->
+<!-- 1. BESPOKE CUSTOM ATELIER (DESIGN YOUR SHAWL YOURSELF) -->
 <section class="feature-form-section" id="custom">
   <div class="loom-threads"></div>
   <div class="container">
     <div class="form-grid-layout">
       <div>
         <span class="sub-heading">Atelier Service 01</span>
-        <h2>Design Your Custom Pashmina</h2>
-        <p style="color: var(--text-muted); margin-bottom: 20px;">Collaborate directly with our master Sozni embroidery artisans in Srinagar. Select your preferred weave density, natural dye shades, initials embroidery, or bespoke Kani border motifs.</p>
+        <h2>Design Your Custom Shawl Yourself</h2>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Collaborate directly with our master Sozni needlework artisans in Srinagar. Select your preferred yarn weave density, organic vegetable dyes, initials monogramming, or bespoke Kani border motifs.</p>
         <ul style="color: var(--text-muted); padding-left: 20px; line-height: 2;">
-          <li>Pure 100% Changthangi Grade-A Pashmina</li>
+          <li>100% Pure Certified Changthangi Grade-A Pashmina</li>
           <li>Hand-dyed in organic Kashmiri botanical dyes</li>
-          <li>Custom initials, monogram, or wedding family crests</li>
+          <li>Custom family crests, wedding trousseaus &amp; monograms</li>
         </ul>
       </div>
       <div class="custom-form">
-        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Bespoke Design Inquiry</h3>
-        <form onsubmit="event.preventDefault(); alert('Inquiry received! Our master artisan will contact you via WhatsApp.');">
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Design Inquiry Form</h3>
+        <form onsubmit="handleCustomSubmit(event)">
           <div class="form-group">
             <label>Full Name</label>
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" id="customName" placeholder="Your Name" required>
           </div>
           <div class="form-group">
             <label>Customization Type</label>
-            <select>
-              <option>Full Sozni Embroidery Shawl</option>
+            <select id="customType">
+              <option>Full Needlework Sozni Embroidery Shawl</option>
               <option>Custom Monogram Stole</option>
               <option>Wedding Bridal Trousseau Pair</option>
-              <option>Custom Kani Border Design</option>
+              <option>Custom Kani Border Pattern</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Specific Instructions / Color Preference</label>
-            <textarea rows="3" placeholder="Describe shades, patterns, or initials..."></textarea>
+            <label>Design Notes / Color Preferences</label>
+            <textarea id="customNotes" rows="3" placeholder="Describe your preferred shades, initials, or motifs..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Submit Custom Request</button>
+          <button type="submit" class="btn-primary" style="width: 100%;">Submit Custom Request via WhatsApp</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PASHMINA SPA & WASHING SERVICE -->
+<!-- 2. PASHMINA SPA & WASHING SERVICE (WASH YOUR SHAWL) -->
 <section class="feature-form-section" id="spa" style="background: var(--bg-main);">
   <div class="river-flow-bg"></div>
   <div class="container">
     <div class="form-grid-layout">
       <div class="custom-form">
-        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Book Pashmina Spa &amp; Repair</h3>
-        <form onsubmit="event.preventDefault(); alert('Spa booking logged. We will schedule doorstep pickup.');">
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Book Shawl Wash &amp; Spa</h3>
+        <form onsubmit="handleSpaSubmit(event)">
           <div class="form-group">
             <label>Phone / WhatsApp Number</label>
-            <input type="tel" placeholder="+91 00000 00000" required>
+            <input type="tel" id="spaPhone" placeholder="+91 00000 00000" required>
           </div>
           <div class="form-group">
             <label>Service Needed</label>
-            <select>
+            <select id="spaService">
               <option>Organic Herbal Wash &amp; Conditioning</option>
               <option>Sozni Embroidery Restoration &amp; Darning</option>
               <option>Fringe Refinishing &amp; Moth Care</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Pickup City</label>
-            <input type="text" placeholder="Srinagar, Delhi, Mumbai, etc." required>
+            <label>Pickup Location / City</label>
+            <input type="text" id="spaCity" placeholder="Srinagar, Delhi, Mumbai, etc." required>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Book Spa Pickup</button>
+          <button type="submit" class="btn-primary" style="width: 100%;">Schedule Doorstep Pickup</button>
         </form>
       </div>
       <div>
         <span class="sub-heading">Atelier Service 02</span>
         <h2>Restoration &amp; Organic Wash Spa</h2>
-        <p style="color: var(--text-muted); margin-bottom: 20px;">Pashmina requires delicate organic care. Standard dry cleaners use harsh chemicals that strip cashmere of its natural lanolin oil. Our traditional Srinagar spa wash cleanses and rejuvenates your delicate heirloom shawls using pure mountain water and organic nut soaps.</p>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Pure cashmere and Pashmina require gentle organic care. Standard dry cleaners use harsh synthetic solvents that strip delicate cashmere fibers of natural lanolin oils.</p>
+        <p style="color: var(--text-muted);">Our traditional Srinagar spa cleanses and restores delicate heritage shawls using pure mountain water, organic reetha soaps, and expert darning artisans.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SELL YOUR HERITAGE PASHMINA -->
+<!-- 3. SELL YOUR HERITAGE SHAWL -->
 <section class="feature-form-section" id="buyback">
   <div class="loom-threads"></div>
   <div class="container">
@@ -275,19 +276,19 @@
       <div>
         <span class="sub-heading">Atelier Service 03</span>
         <h2>Sell Your Vintage Heritage Pashmina</h2>
-        <p style="color: var(--text-muted); margin-bottom: 20px;">Do you own vintage Kashmiri Jamawar, antique Kani, or heirloom Sozni shawls passed down through generations? House of Hakak evaluates vintage textiles for craft age, weave purity, and historical value.</p>
-        <p style="color: var(--text-muted);">We offer fair valuation buybacks or exchange credits towards our new collections.</p>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Do you own vintage Kashmiri Jamawar, antique Kani, or heirloom needlework shawls passed down through generations? House of Hakak evaluates vintage textiles for weave age, craft purity, and historical value.</p>
+        <p style="color: var(--text-muted);">We offer fair valuation buybacks or store exchange credits towards our modern collections.</p>
       </div>
       <div class="custom-form">
-        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Heritage Valuation Form</h3>
-        <form onsubmit="event.preventDefault(); alert('Evaluation request submitted! Our appraisal team will reach out.');">
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Heritage Valuation Inquiry</h3>
+        <form onsubmit="handleSellSubmit(event)">
           <div class="form-group">
             <label>Your Name</label>
-            <input type="text" placeholder="Full Name" required>
+            <input type="text" id="sellName" placeholder="Full Name" required>
           </div>
           <div class="form-group">
             <label>Approximate Age of Shawl</label>
-            <select>
+            <select id="sellAge">
               <option>10–25 Years Old</option>
               <option>25–50 Years Old</option>
               <option>50+ Years (Antique Heirloom)</option>
@@ -295,7 +296,7 @@
           </div>
           <div class="form-group">
             <label>Shawl Details &amp; Condition</label>
-            <textarea rows="3" placeholder="Describe embroidery pattern, size, and condition..."></textarea>
+            <textarea id="sellDetails" rows="3" placeholder="Describe the embroidery, dimensions, and condition..." required></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width: 100%;">Submit for Valuation</button>
         </form>
@@ -304,7 +305,73 @@
   </div>
 </section>
 
-<!-- LEGACY SECTION (GRANDFATHER) -->
+<!-- 4. CAREERS & 25,000+ ARTISAN NETWORK -->
+<section class="feature-form-section" id="careers" style="background: var(--bg-main);">
+  <div class="river-flow-bg"></div>
+  <div class="container">
+    <div class="form-grid-layout">
+      <div>
+        <span class="sub-heading">Empowering Kashmir's Craft</span>
+        <h2>Over 25,000+ Artisans Connected</h2>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">
+          At House of Hakak, our greatest strength lies in our vast community of master weavers, Sozni needlework artists, Kani craftspeople, and yarn spinners across the Kashmir valley. Over three generations, we have built a network of <strong>over 25,000+ connected artisans</strong>, preserving ancient techniques while ensuring sustainable livelihoods.
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">
+          Whether you are a master craftsman looking to showcase your work, a fashion designer, or an e-commerce specialist — DM your CV directly to join our team.
+        </p>
+        
+        <div style="padding: 20px; background: rgba(255, 255, 255, 0.6); border: 1px solid var(--border-light); border-radius: 4px;">
+          <h4 style="font-size: 1rem; margin-bottom: 8px; font-weight: 600; color: var(--accent-gold);">Direct Recruitment Helpline</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
+            💼 <strong>Direct WhatsApp DM:</strong> 
+            <a href="https://wa.me/918899789606?text=Hi%20House%20of%20Hakak,%20I%20would%20like%20to%20DM%20my%20CV." target="_blank" style="color: var(--text-primary); font-weight: 600; text-decoration: underline;">+91 88997 89606</a>
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">
+            ✉️ <strong>Email CV:</strong> <span style="color: var(--text-primary); font-weight: 500;">careers@hkshawl.com</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="custom-form">
+        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">DM Your CV / Profile</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Apply for corporate/design roles or join our 25k+ artisan network.</p>
+        
+        <form onsubmit="handleCareerSubmit(event)">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="applicantName" placeholder="Your Name" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Phone / WhatsApp Number</label>
+            <input type="tel" id="applicantPhone" placeholder="+91 00000 00000" required>
+          </div>
+
+          <div class="form-group">
+            <label>Application Category</label>
+            <select id="applicantRole">
+              <option>Master Artisan / Weaver / Sozni Craftsman (Join 25k+ Network)</option>
+              <option>Textile &amp; Fashion Designer</option>
+              <option>E-Commerce &amp; Social Media Specialist</option>
+              <option>Retail Boutique Manager</option>
+              <option>Quality &amp; Authenticity Inspector</option>
+              <option>General Application / Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Link to CV / Portfolio / Experience Details</label>
+            <textarea id="applicantDetails" rows="3" placeholder="Paste LinkedIn/Google Drive link, or summarize your experience..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%;">DM Your CV via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LEGACY SECTION (GRANDFATHER) -->
 <section class="legacy-clean" id="about">
   <div class="container">
     <div class="legacy-grid">
@@ -314,13 +381,13 @@
       <div class="legacy-text">
         <span class="sub-heading">Lineage &amp; Heritage</span>
         <h2>Three Generations of Pure Craft</h2>
-        <p>Founded in 1960 by <strong>Habibullah Hakak</strong>, House of Hakak was built on vision, grit, and an unyielding commitment to Kashmiri heritage. Born in Downtown Srinagar, Habibullah Hakak laid down an uncompromising standard of handloom purity.</p>
+        <p>Founded in 1960 by <strong>Habibullah Hakak</strong>, House of Hakak was built on vision, grit, and an unyielding commitment to Kashmiri heritage. Born in Downtown Srinagar, Habibullah Hakak laid down an uncompromising standard of handloom purity that remains untouched to this day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CATALOG -->
+<!-- 6. CATALOG -->
 <section class="gallery-clean" id="pashmina">
   <div class="container">
     <div class="filter-bar">
@@ -344,10 +411,11 @@
       <span>Total</span>
       <span id="cartSubtotal">$0.00</span>
     </div>
-    <a href="https://wa.me/918899789606" class="btn-primary" style="width:100%; text-align:center;">Checkout via WhatsApp</a>
+    <button onclick="checkoutWhatsApp()" class="btn-primary" style="width:100%; text-align:center;">Checkout via WhatsApp</button>
   </div>
 </aside>
 
+<!-- FOOTER -->
 <footer>
   <div class="container" style="text-align:center; padding: 40px 0;">
     <p>&copy; HOUSE OF HAKAK · EST. 1960 BY HABIBULLAH HAKAK · SRINAGAR &amp; NEW DELHI</p>
@@ -355,6 +423,7 @@
 </footer>
 
 <script>
+  // Products Dataset
   const products = [
     { id: 1, name: "Silver Medallion Stole", category: "pashmina", craft: "Pure Pashmina", price: 650, img: "assets/pashmina-1.jpg" },
     { id: 2, name: "Multicolour Kani Paisley", category: "pashmina", craft: "Traditional Kani Weave", price: 850, img: "assets/pashmina-2.jpg" },
@@ -366,6 +435,7 @@
 
   let cart = [];
 
+  // Render Product Catalog
   function renderProducts(filter = 'all') {
     const grid = document.getElementById('productGrid');
     grid.innerHTML = '';
@@ -394,6 +464,7 @@
     renderProducts(cat);
   }
 
+  // Cart Functions
   function addToCart(id) { cart.push(products.find(p => p.id === id)); updateCart(); openCart(); }
   function removeFromCart(i) { cart.splice(i, 1); updateCart(); }
 
@@ -417,14 +488,62 @@
     document.getElementById('cartSubtotal').textContent = `$${total}.00`;
   }
 
+  function checkoutWhatsApp() {
+    if (cart.length === 0) return alert("Your cart is empty!");
+    const itemsList = cart.map(i => `- ${i.name} ($${i.price})`).join('%0A');
+    const msg = `*Order Inquiry - House of Hakak*%0A%0A${itemsList}`;
+    window.open(`https://wa.me/918899789606?text=${msg}`, '_blank');
+  }
+
+  // Form Handlers (All Redirect Direct to WhatsApp)
+  function handleCustomSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('customName').value;
+    const type = document.getElementById('customType').value;
+    const notes = document.getElementById('customNotes').value;
+    const msg = `*Bespoke Shawl Order*%0A*Name:* ${encodeURIComponent(name)}%0A*Type:* ${encodeURIComponent(type)}%0A*Notes:* ${encodeURIComponent(notes)}`;
+    window.open(`https://wa.me/918899789606?text=${msg}`, '_blank');
+  }
+
+  function handleSpaSubmit(e) {
+    e.preventDefault();
+    const phone = document.getElementById('spaPhone').value;
+    const service = document.getElementById('spaService').value;
+    const city = document.getElementById('spaCity').value;
+    const msg = `*Shawl Spa Booking*%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(service)}%0A*City:* ${encodeURIComponent(city)}`;
+    window.open(`https://wa.me/918899789606?text=${msg}`, '_blank');
+  }
+
+  function handleSellSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('sellName').value;
+    const age = document.getElementById('sellAge').value;
+    const details = document.getElementById('sellDetails').value;
+    const msg = `*Sell Heritage Shawl*%0A*Name:* ${encodeURIComponent(name)}%0A*Age:* ${encodeURIComponent(age)}%0A*Details:* ${encodeURIComponent(details)}`;
+    window.open(`https://wa.me/918899789606?text=${msg}`, '_blank');
+  }
+
+  function handleCareerSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('applicantName').value;
+    const phone = document.getElementById('applicantPhone').value;
+    const role = document.getElementById('applicantRole').value;
+    const details = document.getElementById('applicantDetails').value;
+    const msg = `*Job & Artisan Application*%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Category:* ${encodeURIComponent(role)}%0A*CV/Details:* ${encodeURIComponent(details)}`;
+    window.open(`https://wa.me/918899789606?text=${msg}`, '_blank');
+  }
+
+  // Drawer Controls
   const drawer = document.getElementById('cartDrawer');
   function openCart() { drawer.classList.add('open'); }
   function closeCart() { drawer.classList.remove('open'); }
   document.getElementById('cartToggleBtn').addEventListener('click', openCart);
 
+  // Header Scroll Effect
   const header = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 30); });
 
+  // Initial Load
   renderProducts();
 </script>
 </body>
