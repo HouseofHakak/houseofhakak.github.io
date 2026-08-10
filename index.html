@@ -9,20 +9,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ============ LIGHT LUXURY DESIGN TOKENS ============ */
+  /* ============ ATMOSPHERIC / KASHMIRI DESIGN TOKENS ============ */
   :root {
-    --bg-main: #FAF8F5;
-    --bg-card: #FFFFFF;
-    --bg-accent: #F3EFEA;
+    --bg-main: #F4F1EA;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-accent: #EBE5D8;
     
-    --text-primary: #1A1A1A;
-    --text-muted: #666057;
-    --text-light: #8C857B;
+    --text-primary: #1C1917;
+    --text-muted: #57534E;
+    --text-light: #78716C;
     
-    --accent-gold: #C5A059;
-    --accent-gold-light: #E8D8B8;
-    --border-light: #E5DFC8;
-    --border-subtle: #EAE6DF;
+    --accent-gold: #B8860B;
+    --accent-river: #2B4C5E;
+    --border-light: #D6CEBE;
+    --border-subtle: #E2DACB;
     
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
@@ -39,11 +39,15 @@
     line-height: 1.8;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    /* Soft mist gradient overlay simulating mountain air */
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(43, 76, 94, 0.05) 0%, transparent 70%),
+      radial-gradient(circle at 0% 100%, rgba(184, 134, 11, 0.04) 0%, transparent 50%);
   }
   a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
   img { max-width: 100%; display: block; }
 
-  .container { max-width: 1280px; margin: 0 auto; padding: 0 5vw; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 2; }
   
   .sub-heading {
     font-family: var(--font-body);
@@ -69,7 +73,7 @@
     font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
     text-transform: uppercase; background: var(--text-primary); color: #FFFFFF;
     padding: 16px 36px; border: 1px solid var(--text-primary);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; backdrop-filter: blur(4px);
   }
   .btn-primary:hover {
     background: transparent; color: var(--text-primary); transform: translateY(-2px);
@@ -86,17 +90,37 @@
     background: var(--text-primary); color: #FFFFFF; transform: translateY(-2px);
   }
 
+  /* ============ ATMOSPHERIC BACKGROUND EFFECTS ============ */
+  /* Flowing River Motion Layer */
+  .river-flow-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, rgba(43, 76, 94, 0) 0%, rgba(43, 76, 94, 0.03) 50%, rgba(43, 76, 94, 0) 100%);
+    background-size: 200% 100%;
+    animation: flowWater 12s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes flowWater {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Loom Thread Motion Lines */
+  .loom-threads {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.15;
+    background-image: repeating-linear-gradient(90deg, var(--border-light) 0px, var(--border-light) 1px, transparent 1px, transparent 40px);
+  }
+
   /* ============ HEADER ============ */
   header.site-header {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     padding: 24px 5vw; transition: all 0.3s ease;
-    background: rgba(250, 248, 245, 0.85); backdrop-filter: blur(10px);
+    background: rgba(244, 241, 234, 0.85); backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
   }
   header.site-header.scrolled {
     padding: 16px 5vw; background: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid var(--border-subtle);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   }
   .nav-wrapper { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; }
   
@@ -117,34 +141,46 @@
 
   /* ============ HERO SECTION ============ */
   .hero-clean {
-    padding-top: 170px; padding-bottom: 100px; background: var(--bg-main);
+    position: relative; padding-top: 180px; padding-bottom: 120px;
+    background: linear-gradient(180deg, rgba(244, 241, 234, 0.4) 0%, rgba(235, 229, 216, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    background-blend-mode: overlay;
     border-bottom: 1px solid var(--border-subtle);
   }
-  .hero-title-area { text-align: center; max-width: 800px; margin: 0 auto 70px; }
-  .hero-title-area h1 { font-size: clamp(2.8rem, 5.5vw, 4.5rem); margin-bottom: 20px; font-weight: 300; }
-  .hero-title-area p { color: var(--text-muted); font-size: 1.1rem; font-weight: 300; max-width: 650px; margin: 0 auto; }
+  .hero-title-area { text-align: center; max-width: 850px; margin: 0 auto 70px; position: relative; z-index: 2; }
+  .hero-title-area h1 { font-size: clamp(2.8rem, 5.5vw, 4.8rem); margin-bottom: 20px; font-weight: 300; letter-spacing: -0.01em; }
+  .hero-title-area p { color: var(--text-muted); font-size: 1.15rem; font-weight: 300; max-width: 680px; margin: 0 auto; }
 
-  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; position: relative; z-index: 2; }
   .hero-card {
-    position: relative; background: var(--bg-card); border: 1px solid var(--border-subtle);
+    position: relative; background: var(--bg-card); border: 1px solid var(--border-light);
     padding: 50px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 520px;
-    transition: all 0.4s ease; overflow: hidden;
+    transition: all 0.4s ease; overflow: hidden; backdrop-filter: blur(6px);
   }
-  .hero-card:hover { border-color: var(--accent-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.04); }
+  .hero-card:hover { border-color: var(--accent-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.06); }
   .hero-card .bg-img {
     position: absolute; inset: 0; background-size: cover; background-position: center;
-    opacity: 0.12; transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0.25; transition: transform 0.6s ease, opacity 0.6s ease;
   }
-  .hero-card:hover .bg-img { transform: scale(1.04); opacity: 0.18; }
+  .hero-card:hover .bg-img { transform: scale(1.05); opacity: 0.35; }
   .hero-card-content { position: relative; z-index: 2; }
   .hero-card-content h2 { font-size: 2.5rem; margin-bottom: 12px; }
   .hero-card-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
 
+  /* ============ CRAFT & ATMOSPHERE SHOWCASE ============ */
+  .craft-banner {
+    padding: 80px 0; background: var(--bg-accent); border-bottom: 1px solid var(--border-subtle); position: relative; overflow: hidden;
+  }
+  .craft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; position: relative; z-index: 2; }
+  .craft-item h3 { font-size: 1.8rem; margin-bottom: 8px; font-weight: 400; }
+  .craft-item p { font-size: 0.9rem; color: var(--text-muted); font-weight: 300; }
+
   /* ============ LEGACY ============ */
-  .legacy-clean { padding: 120px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); }
-  .legacy-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; }
+  .legacy-clean { padding: 120px 0; background: var(--bg-card); border-bottom: 1px solid var(--border-subtle); position: relative; }
+  .legacy-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: center; position: relative; z-index: 2; }
   .legacy-image-frame {
-    position: relative; padding: 12px; background: var(--bg-main); border: 1px solid var(--border-subtle);
+    position: relative; padding: 14px; background: var(--bg-main); border: 1px solid var(--border-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
   }
   .legacy-image-frame img { width: 100%; height: auto; filter: grayscale(100%); transition: filter 0.5s ease; }
   .legacy-image-frame:hover img { filter: grayscale(0%); }
@@ -152,19 +188,19 @@
   .legacy-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; font-weight: 300; }
 
   /* ============ GALLERY ============ */
-  .gallery-clean { padding: 120px 0; background: var(--bg-main); }
-  .section-intro { text-align: center; max-width: 650px; margin: 0 auto 70px; }
+  .gallery-clean { padding: 120px 0; background: var(--bg-main); position: relative; }
+  .section-intro { text-align: center; max-width: 650px; margin: 0 auto 70px; position: relative; z-index: 2; }
   .section-intro h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
   .section-intro p { color: var(--text-muted); font-size: 1rem; font-weight: 300; }
 
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; position: relative; z-index: 2; }
   .product-card {
     background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; backdrop-filter: blur(4px);
   }
-  .product-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+  .product-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
   .product-card .img-box {
-    aspect-ratio: 4/5; overflow: hidden; background: #F5F3EF; display: flex; align-items: center; justify-content: center;
+    aspect-ratio: 4/5; overflow: hidden; background: #EFECE6; display: flex; align-items: center; justify-content: center;
   }
   .product-card .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
   .product-card:hover .img-box img { transform: scale(1.05); }
@@ -175,14 +211,15 @@
   /* ============ SAFFRON HIGHLIGHT ============ */
   .saffron-clean {
     padding: 110px 0; background: var(--bg-accent); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+    position: relative; overflow: hidden;
   }
-  .saffron-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .saffron-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
   .saffron-left h2 { font-size: 3.4rem; margin-bottom: 20px; font-weight: 300; }
   .saffron-left p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 30px; font-weight: 300; }
   
   .saffron-card-white {
     background: var(--bg-card); border: 1px solid var(--border-light); padding: 45px; text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); backdrop-filter: blur(6px);
   }
   .saffron-card-white h3 { font-size: 2.4rem; margin-bottom: 12px; }
   .saffron-card-white p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; font-weight: 300; }
@@ -199,18 +236,18 @@
   .outlet-item p { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; }
 
   /* ============ FOOTER & CTA ============ */
-  .cta-clean { padding: 100px 0; text-align: center; background: var(--bg-main); }
+  .cta-clean { padding: 100px 0; text-align: center; background: var(--bg-main); position: relative; }
   .cta-clean h2 { font-size: 3.2rem; margin-bottom: 16px; font-weight: 300; }
   .cta-clean p { color: var(--text-muted); max-width: 550px; margin: 0 auto 35px; font-weight: 300; }
 
-  footer { background: var(--bg-card); border-top: 1px solid var(--border-subtle); padding: 35px 0; text-align: center; }
+  footer { background: var(--bg-card); border-top: 1px solid var(--border-subtle); padding: 35px 0; text-align: center; position: relative; z-index: 2; }
   footer p { font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-light); text-transform: uppercase; }
 
   /* Responsive Adjustments */
   @media (max-width: 1024px) {
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .outlets-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-grid, .legacy-grid, .saffron-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid, .legacy-grid, .saffron-wrapper, .craft-grid { grid-template-columns: 1fr; gap: 40px; }
   }
   @media (max-width: 768px) {
     nav.nav-menu { display: none; }
@@ -239,9 +276,12 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero-clean" id="top">
+  <div class="river-flow-bg"></div>
+  <div class="loom-threads"></div>
+  
   <div class="container">
     <div class="hero-title-area">
-      <span class="sub-heading">Kashmiri Atelier</span>
+      <span class="sub-heading">Kashmiri Atelier · Woven by the Jhelum</span>
       <h1>Authentic Pashmina &amp; Saffron</h1>
       <p>Three generations of pure handloom craftsmanship through HK Shawls and authentic Kashmiri agricultural treasures via Kashmir Foods, preserved since 1960.</p>
     </div>
@@ -270,8 +310,34 @@
   </div>
 </section>
 
+<!-- ============ CRAFT & ATMOSPHERE BANNER ============ -->
+<section class="craft-banner">
+  <div class="river-flow-bg"></div>
+  <div class="loom-threads"></div>
+  <div class="container">
+    <div class="craft-grid">
+      <div class="craft-item">
+        <span class="sub-heading">High Altitude Cashmere</span>
+        <h3>Changthangi Fleece</h3>
+        <p>Harvested at 14,000 feet, spun by hand into ultra-fine threads.</p>
+      </div>
+      <div class="craft-item">
+        <span class="sub-heading">Needlework Precision</span>
+        <h3>Sozni &amp; Kani Weave</h3>
+        <p>Months of dedicated hand embroidery passed down through master artisans.</p>
+      </div>
+      <div class="craft-item">
+        <span class="sub-heading">Valley Agriculture</span>
+        <h3>Pampore Crimson</h3>
+        <p>Pure Mongra saffron strands picked directly from the autumn bloom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ LEGACY ============ -->
 <section class="legacy-clean" id="about">
+  <div class="loom-threads"></div>
   <div class="container">
     <div class="legacy-grid">
       <div class="legacy-image-frame">
@@ -289,6 +355,7 @@
 
 <!-- ============ GALLERY ============ -->
 <section class="gallery-clean" id="pashmina">
+  <div class="river-flow-bg"></div>
   <div class="container">
     <div class="section-intro">
       <span class="sub-heading">HK Shawls Collection</span>
@@ -362,6 +429,7 @@
 
 <!-- ============ SAFFRON ============ -->
 <section class="saffron-clean" id="saffron">
+  <div class="river-flow-bg"></div>
   <div class="container">
     <div class="saffron-wrapper">
       <div class="saffron-left">
@@ -412,6 +480,7 @@
 
 <!-- ============ CONTACT ============ -->
 <section class="cta-clean" id="contact">
+  <div class="river-flow-bg"></div>
   <div class="container">
     <span class="sub-heading">Personalized Support</span>
     <h2>Concierge Services</h2>
